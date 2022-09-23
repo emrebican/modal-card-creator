@@ -1,6 +1,8 @@
 import styles from '../styles/Hero.module.scss'
 import { FiCheck } from 'react-icons/fi'
 
+import Center_Content from './Center_Content'
+
 const Hero = () => {
   return (
     <div className={styles.container}>
@@ -31,7 +33,7 @@ const Hero = () => {
       </div>
 
       {/* Center Content */}
-
+      <Center_Content />
       {/* Bottom Content */}
       <div className={styles.bottom_content}>
         <section>
