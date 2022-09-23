@@ -2,6 +2,10 @@ import styles from '../styles/Center_Content.module.scss'
 import Image from 'next/image'
 
 const Center_Content = () => {
+  const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault()
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.left_content}>
@@ -16,7 +20,7 @@ const Center_Content = () => {
           Subscribe and Get an Extra <br />
           <strong>25% Off</strong> on your first purchase.
         </span>
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <input type="text" placeholder="Email address" />
           <button>Subscribe</button>
         </form>

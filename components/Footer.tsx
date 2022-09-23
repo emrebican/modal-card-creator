@@ -16,5 +16,5 @@ const Footer = () => {
     </footer>
   )
 }
-
+/* En altta Conversion & UX ready popups & modals ile başlayan kısın olacak*/
 export default Footer

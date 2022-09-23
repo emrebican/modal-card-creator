@@ -1,11 +1,14 @@
 import type { NextPage } from 'next'
+
 import Hero from '../components/Hero'
+import Modals from '../components/Modals'
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Hero />
-    </div>
+      <Modals />
+    </>
   )
 }
 

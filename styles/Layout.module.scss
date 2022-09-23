@@ -1,6 +1,38 @@
 @import 'variables';
+
 .container {
   width: 1194px;
   height: 100%;
   margin: 0 auto;
+  margin-top: 21px;
+
+  .content {
+    margin: 90px 0;
+
+    section {
+      @include flex(flex, center, flex-start);
+      flex-direction: column;
+      font-family: $ff-poppins;
+      margin-bottom: 90px;
+
+      .title {
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 48px;
+        @include letter-spacing(-0.03em);
+        color: $color-black;
+        text-transform: capitalize;
+      }
+
+      .text {
+        width: 459px;
+        margin-top: 15px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        @include letter-spacing(-0.015em);
+        color: $color-black;
+      }
+    }
+  }
 }
