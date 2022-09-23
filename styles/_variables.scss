@@ -1,0 +1,33 @@
+// Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+// Inter
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+// COLORS
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #777777;
+$color-666: #666666;
+$color-light-gray: #dddddd;
+$color-purple: #7d4aea;
+$color-orange: #f37c34;
+$color-yellow: #f2a737;
+$color-green: #63c77f;
+$color-red: #63c77f;
+
+// FONTS
+$ff-poppins: 'Poppins', sans-serif;
+$ff-inter: 'Inter', sans-serif;
+
+// BACKGROUNDS
+$bg-modal: #f5f5f5;
+
+// BORDERS
+$border-modal: #eaeaea;
+
+/* ABSTRACTS */
+@mixin flex($display, $justify, $align) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
