@@ -32,4 +32,8 @@ $border-modal: #eaeaea;
   align-items: $align;
 }
 
+@mixin letter-spacing($spacing) {
+  letter-spacing: $spacing;
+}
+
 $general-tansition: all ease 0.4s;
