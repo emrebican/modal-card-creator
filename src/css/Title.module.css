@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+/* ABSTRACTS */
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  margin-top: 90px;
+  letter-spacing: -0.03em;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper .number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #eaeaea;
+  font-weight: 600;
+  line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.wrapper .explanation {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+}

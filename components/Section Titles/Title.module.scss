@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.wrapper {
+  @include flex(flex, flex-start, center);
+  gap: 15px;
+  margin-top: 90px;
+
+  @include letter-spacing(-0.03em);
+  color: $color-black;
+  font-family: $ff-poppins;
+
+  .number {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $bg-template;
+    font-weight: 600;
+    line-height: 24px;
+    @include flex(flex, center, center);
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+
+  .explanation {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 36px;
+  }
+}
