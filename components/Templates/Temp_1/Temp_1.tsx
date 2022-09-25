@@ -7,8 +7,13 @@ import { useSelector } from 'react-redux'
 // Abstracts
 import Rounded_Cancel_Btn from '../../../abstracts/Rounded_Cancel_Btn/Rounded_Cancel_Btn'
 
+// Constants
+import { colors } from '../../../constants/colors'
+
 const Temp_1 = () => {
-  const name = useSelector((state: RootState) => state.global.name)
+  const buttonColor = useSelector(
+    (state: RootState) => state.global.buttonColor
+  )
 
   return (
     <S.Temp_1_Container>
@@ -21,8 +26,12 @@ const Temp_1 = () => {
             <input type="text" placeholder="Enter your email" />
             <Sign_Up_Btn
               text="Sign up"
-              clr="#fff"
-              bg_clr="#7D4AEA"
+              clr={
+                buttonColor === colors.LightGray || buttonColor === colors.White
+                  ? colors.Black
+                  : colors.White
+              }
+              bg_clr={buttonColor}
               width_value="300px"
               height_value="48px"
               border_value="none"

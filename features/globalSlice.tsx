@@ -1,14 +1,18 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 const initialState = {
-  name: 'emre'
+  buttonColor: '#7D4AEA'
 }
 
 export const globalSlice = createSlice({
   name: 'global',
   initialState,
-  reducers: {}
+  reducers: {
+    changeBtnColor: (state, action) => {
+      state.buttonColor = action.payload
+    }
+  }
 })
 
-export const {} = globalSlice.actions
+export const { changeBtnColor } = globalSlice.actions
 export default globalSlice.reducer

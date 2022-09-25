@@ -1,11 +1,18 @@
 import styles from '../../styles/Appearance.module.scss'
+import { useDispatch } from 'react-redux'
 import { useRef } from 'react'
+
+import { changeBtnColor } from '../../features/globalSlice'
 import { selectSize } from '../../utilities/selectSize'
 
 import Title from '../Section Titles/Title'
 import TempDisplayArea from '../../abstracts/Template Display Area/TempDisplayArea'
 
+// Constants
+import { colors } from '../../constants/colors'
+
 const Appearance = () => {
+  const dispatch = useDispatch()
   const array = [...Array(9)]
   const refDiv: any = useRef(null)
 
@@ -42,11 +49,21 @@ const Appearance = () => {
         <div className={styles.section}>
           <span className={styles.section_title}>colors</span>
           <div className={styles.colors}>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
+            <button
+              onClick={() => dispatch(changeBtnColor(colors.Black))}
+            ></button>
+            <button
+              onClick={() => dispatch(changeBtnColor(colors.Orange))}
+            ></button>
+            <button
+              onClick={() => dispatch(changeBtnColor(colors.Gray))}
+            ></button>
+            <button
+              onClick={() => dispatch(changeBtnColor(colors.LightGray))}
+            ></button>
+            <button
+              onClick={() => dispatch(changeBtnColor(colors.White))}
+            ></button>
           </div>
         </div>
         {/* Upload Logo */}
