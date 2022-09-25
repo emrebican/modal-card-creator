@@ -8,11 +8,13 @@ export interface TitleInterface {
   explanation?: string
 }
 
+// Rounded Cancel Btn
 export interface RoundedCancelBtnInterface {
   top_value: string
   right_value: string
 }
 
+// Sign up Btn
 export interface SignUpBtnInterface {
   width_value: string
   height_value: string

@@ -1,10 +1,15 @@
 import * as S from './styled'
 import Sign_Up_Btn from '../../../abstracts/Sign_Up_Btn/Sign_Up_Btn'
 
+import { RootState } from '../../../features/store'
+import { useSelector } from 'react-redux'
+
 // Abstracts
 import Rounded_Cancel_Btn from '../../../abstracts/Rounded_Cancel_Btn/Rounded_Cancel_Btn'
 
 const Temp_1 = () => {
+  const name = useSelector((state: RootState) => state.global.name)
+
   return (
     <S.Temp_1_Container>
       <S.Temp_1_Left>

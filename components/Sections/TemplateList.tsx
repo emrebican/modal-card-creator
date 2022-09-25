@@ -7,7 +7,8 @@ const TemplateList = () => {
     <>
       <Title number={1} title="Choose your template" />
       <div className={styles.gridList}>
-        <Temp_1 />
+        {/* <Temp_1 /> */}
+        {/* Grid sistemi olacak figmadaki resimleri sergileyebiliriz */}
       </div>
     </>
   )
