@@ -1,13 +1,16 @@
 import styled from 'styled-components'
 
 const Temp_1_Container = styled.div`
-  width: 740px;
-  height: 443px;
+  width: ${(props: any) => props.width_value + 'px'};
+  height: ${(props: any) => props.height_value + 'px'};
   display: flex;
 `
 
 const Temp_1_Left = styled.div`
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-top-left-radius: 14px;
   border-bottom-left-radius: 14px;
   background-color: #fff;
@@ -15,7 +18,7 @@ const Temp_1_Left = styled.div`
   .temp_1_section {
     width: 300px;
     margin: 0 40.5px;
-    margin-top: 49px;
+    /* margin-top: 49px; */
     display: flex;
     flex-direction: column;
 

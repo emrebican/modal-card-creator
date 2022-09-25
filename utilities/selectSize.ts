@@ -1,4 +1,12 @@
-export const selectSize = (type: string, ref: any) => {
+import { changeTempSize } from '../features/globalSlice'
+
+export const selectSize = (
+  type: string,
+  ref: any,
+  dispatch: any,
+  width: number,
+  height: number
+) => {
   let elements = ref.current.children
 
   let btns = [...elements]
@@ -7,6 +15,19 @@ export const selectSize = (type: string, ref: any) => {
   btns.filter((element) => {
     if (element.innerHTML == type) {
       element.classList.add('Appearance_active_size__cHLf5')
+    }
+
+    if (type == 'small') {
+      dispatch(
+        changeTempSize({
+          width: width - 100,
+          height: height - 50
+        })
+      )
+    } else if (type == 'large') {
+      dispatch(changeTempSize({ width: width + 100, height: height + 50 }))
+    } else {
+      dispatch(changeTempSize({ width: width, height: height }))
     }
   })
 }

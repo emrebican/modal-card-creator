@@ -15,8 +15,16 @@ const Temp_1 = () => {
     (state: RootState) => state.global.buttonColor
   )
 
+  const width_value: number = useSelector(
+    (state: RootState) => state.global.templateSize.width
+  )
+  const height_value: number = useSelector(
+    (state: RootState) => state.global.templateSize.height
+  )
+  console.log(width_value, height_value)
+
   return (
-    <S.Temp_1_Container>
+    <S.Temp_1_Container width_value={width_value} height_value={height_value}>
       <S.Temp_1_Left>
         <div className="temp_1_section">
           <span className="temp_1_title">Sign up</span>

@@ -1,6 +1,7 @@
 import styles from '../../styles/Appearance.module.scss'
-import { useDispatch } from 'react-redux'
-import { useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from '../../features/store'
+import { useState, useEffect, useRef } from 'react'
 
 import { changeBtnColor } from '../../features/globalSlice'
 import { selectSize } from '../../utilities/selectSize'
@@ -13,6 +14,20 @@ import { colors } from '../../constants/colors'
 
 const Appearance = () => {
   const dispatch = useDispatch()
+  // Template Size
+  const [size, setSize] = useState({ width: 0, height: 0 })
+
+  useEffect(() => {
+    setSize({ width: width_value, height: height_value })
+  }, [])
+
+  const width_value: number = useSelector(
+    (state: RootState) => state.global.templateSize.width
+  )
+  const height_value: number = useSelector(
+    (state: RootState) => state.global.templateSize.height
+  )
+
   const array = [...Array(9)]
   const refDiv: any = useRef(null)
 
@@ -26,14 +41,28 @@ const Appearance = () => {
         <div className={styles.section}>
           <span className={styles.section_title}>Size</span>
           <div className={styles.buttons} ref={refDiv}>
-            <button onClick={() => selectSize('small', refDiv)}>small</button>
+            <button
+              onClick={() =>
+                selectSize('small', refDiv, dispatch, size.width, size.height)
+              }
+            >
+              small
+            </button>
             <button
               className={styles.active_size}
-              onClick={() => selectSize('medium', refDiv)}
+              onClick={() =>
+                selectSize('medium', refDiv, dispatch, size.width, size.height)
+              }
             >
               medium
             </button>
-            <button onClick={() => selectSize('large', refDiv)}>large</button>
+            <button
+              onClick={() =>
+                selectSize('large', refDiv, dispatch, size.width, size.height)
+              }
+            >
+              large
+            </button>
           </div>
         </div>
         {/* Position Section */}

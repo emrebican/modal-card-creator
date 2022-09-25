@@ -13,6 +13,7 @@ const Button = styled.button`
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  transition: all ease 0.4s;
 `
 
 export { Button }
