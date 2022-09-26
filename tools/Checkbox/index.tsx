@@ -1,9 +1,14 @@
 import styles from './Checkbox.module.scss'
 
-const Checkbox = ({ device }: any) => {
+const Checkbox = ({ device, disable }: any) => {
   return (
     <label className={styles.container}>
-      <input type="checkbox" checked={device} readOnly />
+      <input
+        type="checkbox"
+        disabled={disable}
+        checked={disable === true ? false : device}
+        readOnly
+      />
       <span className={styles.checkmark}></span>
     </label>
   )

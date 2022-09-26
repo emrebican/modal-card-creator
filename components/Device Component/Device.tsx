@@ -8,10 +8,10 @@ import { deviceInterface } from '../../Interfaces/Interfaces'
 import { MdComputer } from 'react-icons/md'
 import { BiMobile } from 'react-icons/bi'
 
-const Device = ({ type, logo, device }: deviceInterface) => {
+const Device = ({ type, logo, device, disable }: deviceInterface) => {
   return (
     <div className={styles.wrapper}>
-      <Checkbox device={device} />
+      <Checkbox device={device} disable={disable} />
       {/* <MdComputer className={styles.logo} /> */}
       <Image src={logo} width={18} height={18} />
       <span className={styles.type}>{type}</span>

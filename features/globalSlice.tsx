@@ -11,7 +11,8 @@ const initialState: initialInterface = {
   targetingDevice: {
     desktop: false,
     mobile: false
-  }
+  },
+  disableDevice: true
 }
 
 export const globalSlice = createSlice({
@@ -30,10 +31,19 @@ export const globalSlice = createSlice({
     },
     getTargeting: (state, action) => {
       state.targetingDevice = action.payload
+    },
+    // Disables
+    toggleDeviceDisable: (state) => {
+      state.disableDevice = !state.disableDevice
     }
   }
 })
 
-export const { changeTempSize, changeBtnColor, getTempContent, getTargeting } =
-  globalSlice.actions
+export const {
+  changeTempSize,
+  changeBtnColor,
+  getTempContent,
+  getTargeting,
+  toggleDeviceDisable
+} = globalSlice.actions
 export default globalSlice.reducer

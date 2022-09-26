@@ -17,6 +17,7 @@
         line-height: 18px;
         color: $color-black;
         @include letter-spacing(-0.03em);
+        text-transform: capitalize;
       }
     }
 

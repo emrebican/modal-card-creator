@@ -38,6 +38,7 @@ export interface initialInterface {
   }
   templateContent: any
   targetingDevice: targetInterface
+  disableDevice: boolean
 }
 
 // Devices
@@ -45,4 +46,5 @@ export interface deviceInterface {
   type: string
   logo: string
   device: boolean
+  disable: boolean
 }

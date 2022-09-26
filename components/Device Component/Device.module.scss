@@ -5,6 +5,7 @@
   height: 48px;
   background-color: $bg-modal;
   border-radius: 12px;
+  cursor: pointer;
   @include flex(flex, center, center);
   gap: 10px;
 
