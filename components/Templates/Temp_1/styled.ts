@@ -1,9 +1,11 @@
 import styled from 'styled-components'
+import { colors, fonts } from '../../../constants/constants'
 
 const Temp_1_Container = styled.div`
   width: ${(props: any) => props.width_value + 'px'};
   height: ${(props: any) => props.height_value + 'px'};
   display: flex;
+  transition: all ease 0.4s;
 `
 
 const Temp_1_Left = styled.div`
@@ -13,7 +15,7 @@ const Temp_1_Left = styled.div`
   align-items: center;
   border-top-left-radius: 14px;
   border-bottom-left-radius: 14px;
-  background-color: #fff;
+  background-color: ${colors.White};
 
   .temp_1_section {
     width: 300px;
@@ -23,19 +25,19 @@ const Temp_1_Left = styled.div`
     flex-direction: column;
 
     .temp_1_title {
-      font-family: 'Inter', sans-serif;
+      font-family: ${fonts.ff_Inter};
       font-size: 36px;
       font-weight: 700;
       line-height: 43.57px;
-      color: #000;
+      color: ${colors.Black};
     }
 
     .temp_1_text {
-      font-family: 'Inter', sans-serif;
+      font-family: ${fonts.ff_Inter};
       font-weight: 400;
       font-size: 24px;
       line-height: 29px;
-      color: #000;
+      color: ${colors.Black};
       margin-top: 15px;
       margin-bottom: 31.5px;
     }
@@ -51,21 +53,21 @@ const Temp_1_Left = styled.div`
         height: 47px;
         border-radius: 12px;
         outline: none;
-        border: 1px solid #d2dae3;
+        border: 1px solid ${colors.BlueGray};
         padding: 0 14.5px;
 
-        font-family: 'Inter';
+        font-family: ${fonts.ff_Inter};
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
-        color: #000000;
+        color: ${colors.Black};
 
         &::placeholder {
-          font-family: 'Inter';
+          font-family: ${fonts.ff_Inter};
           font-weight: 400;
           font-size: 16px;
           line-height: 19px;
-          color: #000000;
+          color: ${colors.Black};
         }
 
         :nth-child(2n) {
@@ -82,11 +84,11 @@ const Temp_1_Left = styled.div`
       margin-top: 20px;
 
       span {
-        font-family: 'Inter';
+        font-family: ${fonts.ff_Inter};
         font-weight: 400;
         font-size: 14px;
         line-height: 17px;
-        color: #000;
+        color: ${colors.Black};
         cursor: pointer;
       }
     }

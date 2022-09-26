@@ -1,4 +1,4 @@
-import styles from '../../styles/Appearance.module.scss'
+import styles from '../../styles/section_styles/Appearance.module.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../features/store'
 import { useState, useEffect, useRef } from 'react'
@@ -6,14 +6,19 @@ import { useState, useEffect, useRef } from 'react'
 import { changeBtnColor } from '../../features/globalSlice'
 import { selectSize } from '../../utilities/selectSize'
 
+// Components
 import Title from '../Section Titles/Title'
 import TempDisplayArea from '../../abstracts/Template Display Area/TempDisplayArea'
+import ImageUpload from '../Image Upload Component/ImageUpload'
 
 // Constants
-import { colors } from '../../constants/colors'
+import { colors } from '../../constants/constants'
 
 const Appearance = () => {
   const dispatch = useDispatch()
+  const refDiv: any = useRef(null)
+  const positionArray = [...Array(9)]
+
   // Template Size
   const [size, setSize] = useState({ width: 0, height: 0 })
 
@@ -27,9 +32,6 @@ const Appearance = () => {
   const height_value: number = useSelector(
     (state: RootState) => state.global.templateSize.height
   )
-
-  const array = [...Array(9)]
-  const refDiv: any = useRef(null)
 
   return (
     <>
@@ -69,8 +71,8 @@ const Appearance = () => {
         <div className={styles.section}>
           <span className={styles.section_title}>position</span>
           <div className={styles.positions}>
-            {array.map((p, i) => (
-              <button>{p}</button>
+            {positionArray.map((p, i) => (
+              <button key={i}>{p}</button>
             ))}
           </div>
         </div>
@@ -98,10 +100,9 @@ const Appearance = () => {
         {/* Upload Logo */}
         <div className={styles.section}>
           <span className={styles.section_title}>upload logo</span>
-          <div className={styles.upload_area}>
-            {/* drag drop image upload nasıl çalışır öğren */}
-            {/* Ayrı bir component oluşturulabilir */}
-          </div>
+          {/* drag drop image upload nasıl çalışır öğren */}
+          {/* Ayrı bir component oluşturulabilir */}
+          <ImageUpload />
         </div>
       </div>
     </>

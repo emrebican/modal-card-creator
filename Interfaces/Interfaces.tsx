@@ -23,3 +23,13 @@ export interface SignUpBtnInterface {
   text: string
   border_value?: string
 }
+
+// Initial Interface
+export interface initialInterface {
+  buttonColor: string
+  templateSize: {
+    width: number
+    height: number
+  }
+  templateContent: any
+}

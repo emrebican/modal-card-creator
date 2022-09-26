@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { fonts } from '../../constants/constants'
 
 const Button = styled.button`
   width: ${(props: any) => props.width_value};
@@ -9,11 +10,16 @@ const Button = styled.button`
 
   border-radius: 12px;
   cursor: pointer;
-  font-family: 'Inter';
+  font-family: ${fonts.ff_Inter};
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
   transition: all ease 0.4s;
+
+  &:hover {
+    box-shadow: 0px 0px 10px 1px
+      ${(props: any) => (props.bg_clr === '#fff' ? '#ccc' : props.bg_clr)};
+  }
 `
 
 export { Button }

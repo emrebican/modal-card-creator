@@ -1,4 +1,4 @@
-import styles from '../../styles/TemplateList.module.scss'
+import styles from '../../styles/section_styles/TemplateList.module.scss'
 import Title from '../Section Titles/Title'
 import Temp_1 from '../Templates/Temp_1/Temp_1'
 
