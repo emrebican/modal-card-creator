@@ -1,0 +1,56 @@
+@import '../../styles/variables';
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: none;
+    }
+  }
+
+  &:hover input ~ .checkmark {
+    background-color: $bg-template;
+    transition: $general-tansition;
+  }
+
+  & input:checked ~ .checkmark {
+    background-color: $color-purple;
+    border: 1px solid $color-purple;
+    transition: $general-tansition;
+  }
+
+  & input:checked ~ .checkmark:after {
+    display: block;
+  }
+  & .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 9.9px;
+    border: solid white;
+    border-width: 0 1.7px 1.7px 0;
+    transform: rotate(45deg);
+  }
+}

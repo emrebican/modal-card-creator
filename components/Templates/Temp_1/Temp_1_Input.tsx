@@ -43,14 +43,14 @@ const Temp_1_Input = () => {
       <input
         type="text"
         placeholder="Enter Information"
-        maxLength={24}
+        maxLength={26}
         name="text"
         value={content.text}
         onChange={handleContent}
       />
       <input
         type="text"
-        placeholder="Enter your full name"
+        placeholder="Enter a placeholder"
         maxLength={25}
         name="input_1"
         value={content.input_1}
@@ -58,7 +58,7 @@ const Temp_1_Input = () => {
       />
       <input
         type="text"
-        placeholder="Enter your email"
+        placeholder="Enter a place holder"
         maxLength={25}
         name="input_2"
         value={content.input_2}
