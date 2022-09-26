@@ -16,7 +16,7 @@
     display: block;
     width: 33px;
     height: 18px;
-    background-color: $color-purple;
+    background-color: $border-input;
     cursor: pointer;
     border-radius: 20px;
     overflow: hidden;
@@ -38,5 +38,8 @@
   input:checked ~ .checkmark::before {
     background-color: $color-white;
     transform: translateX(15.5px);
+  }
+  input:checked ~ .checkmark {
+    background-color: $color-purple;
   }
 }

@@ -1,0 +1,24 @@
+@import '../../styles/variables';
+
+.wrapper {
+  width: 179px;
+  height: 48px;
+  background-color: $bg-modal;
+  border-radius: 12px;
+  @include flex(flex, center, center);
+  gap: 10px;
+
+  /*   .logo {
+    width: 22px;
+    height: 18px;
+    color: #999;
+  } */
+
+  .type {
+    font-family: $ff-poppins;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $color-black;
+  }
+}

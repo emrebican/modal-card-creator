@@ -8,6 +8,11 @@ export interface TitleInterface {
   explanation?: string
 }
 
+interface targetInterface {
+  desktop: boolean
+  mobile: boolean
+}
+
 // Rounded Cancel Btn
 export interface RoundedCancelBtnInterface {
   top_value: string
@@ -32,4 +37,12 @@ export interface initialInterface {
     height: number
   }
   templateContent: any
+  targetingDevice: targetInterface
+}
+
+// Devices
+export interface deviceInterface {
+  type: string
+  logo: string
+  device: boolean
 }

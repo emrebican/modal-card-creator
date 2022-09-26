@@ -5,9 +5,10 @@
   position: relative;
   cursor: pointer;
   user-select: none;
+  margin-right: 15px;
 
   input {
-    position: absolute;
+    // position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
@@ -20,7 +21,7 @@
     left: 0;
     height: 18px;
     width: 18px;
-    border: 1px solid #bbbbbb;
+    border: 1px solid $border-input;
     border-radius: 4px;
 
     &:after {

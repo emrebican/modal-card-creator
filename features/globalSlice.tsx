@@ -7,7 +7,11 @@ import { initialInterface } from '../Interfaces/Interfaces'
 const initialState: initialInterface = {
   buttonColor: colors.Purple,
   templateSize: { width: 740, height: 443 },
-  templateContent: null
+  templateContent: null,
+  targetingDevice: {
+    desktop: false,
+    mobile: false
+  }
 }
 
 export const globalSlice = createSlice({
@@ -23,10 +27,13 @@ export const globalSlice = createSlice({
     },
     getTempContent: (state, action) => {
       state.templateContent = action.payload
+    },
+    getTargeting: (state, action) => {
+      state.targetingDevice = action.payload
     }
   }
 })
 
-export const { changeTempSize, changeBtnColor, getTempContent } =
+export const { changeTempSize, changeBtnColor, getTempContent, getTargeting } =
   globalSlice.actions
 export default globalSlice.reducer
