@@ -13,6 +13,28 @@ interface targetInterface {
   mobile: boolean
 }
 
+export interface targetingValuesInterface {
+  second: number | string
+  scroll: number | string
+  source: string
+}
+
+// Disables
+export interface disablesInterface {
+  disableDevice: boolean
+  disableSeconds: boolean
+  disableScroll: boolean
+  disableSource: boolean
+}
+
+// Input
+export interface inputInterface {
+  type: string
+  place: string
+  value: string
+  disable: boolean
+}
+
 // Rounded Cancel Btn
 export interface RoundedCancelBtnInterface {
   top_value: string
@@ -38,7 +60,8 @@ export interface initialInterface {
   }
   templateContent: any
   targetingDevice: targetInterface
-  disableDevice: boolean
+  targetValues: targetingValuesInterface
+  disables: disablesInterface
 }
 
 // Devices
