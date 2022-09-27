@@ -64,6 +64,7 @@ export interface initialInterface {
   targetValues: targetingValuesInterface
   disables: disablesInterface
   languages: string[]
+  exitIntentTargeting: boolean
 }
 
 // Devices

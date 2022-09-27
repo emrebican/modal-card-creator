@@ -26,7 +26,8 @@ const initialState: initialInterface = {
     disableLanguage: false
   },
   // Languages
-  languages: []
+  languages: [],
+  exitIntentTargeting: true
 }
 
 export const globalSlice = createSlice({
@@ -76,6 +77,10 @@ export const globalSlice = createSlice({
     },
     deleteAllLanguages: (state) => {
       state.languages = []
+    },
+    // Exiting Intent Targeting
+    toggleExitIntentTargeting: (state) => {
+      state.exitIntentTargeting = !state.exitIntentTargeting
     }
   }
 })
@@ -93,6 +98,7 @@ export const {
   toggleLanguageDisable,
   getLanguages,
   deleteLanguage,
-  deleteAllLanguages
+  deleteAllLanguages,
+  toggleExitIntentTargeting
 } = globalSlice.actions
 export default globalSlice.reducer

@@ -8,7 +8,8 @@ import {
   toggleSecondsDisable,
   toggleScrollDisable,
   toggleSourceDisable,
-  toggleLanguageDisable
+  toggleLanguageDisable,
+  toggleExitIntentTargeting
 } from '../../features/globalSlice'
 
 // Tools & Components
@@ -25,6 +26,9 @@ const Targeting = () => {
     (state: RootState) => state.global.targetingDevice
   )
   const disables = useSelector((state: RootState) => state.global.disables)
+  const exitIntentTargeting = useSelector(
+    (state: RootState) => state.global.exitIntentTargeting
+  )
 
   // Disable Functions
   const deviceDisable = () => {
@@ -42,6 +46,9 @@ const Targeting = () => {
   }
   const languageDisable = () => {
     dispatch(toggleLanguageDisable())
+  }
+  const exitIntentDisable = () => {
+    dispatch(toggleExitIntentTargeting())
   }
 
   return (
@@ -153,7 +160,12 @@ const Targeting = () => {
         <div className={styles.section}>
           <div className={styles.title_wrapper}>
             <span className={styles.section_title}>Exit Intent Targeting</span>
-            {<OnOff />}
+            {
+              <OnOff
+                check={!exitIntentTargeting}
+                isDisable={exitIntentDisable}
+              />
+            }
           </div>
         </div>
       </div>

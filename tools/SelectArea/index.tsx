@@ -17,14 +17,6 @@ const SelectArea = ({ disable }: any) => {
       e.target.value !== '' &&
       !languages.includes(e.target.value) &&
       dispatch(getLanguages(e.target.value))
-
-    /*  if (
-      languages.length < 3 &&
-      e.target.value !== '' &&
-      !languages.includes(e.target.value)
-    ) {
-      dispatch(getLanguages(e.target.value))
-    } */
   }
 
   useEffect(() => {
