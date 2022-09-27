@@ -7,13 +7,17 @@ import {
   toggleDeviceDisable,
   toggleSecondsDisable,
   toggleScrollDisable,
-  toggleSourceDisable
+  toggleSourceDisable,
+  toggleLanguageDisable
 } from '../../features/globalSlice'
 
+// Tools & Components
 import Title from '../Section Titles/Title'
 import OnOff from '../../tools/OnOff'
 import Device from '../Device Component/Device'
 import Targeting_Input from '../../tools/Targeting Input'
+import SelectArea from '../../tools/SelectArea'
+import Languages from '../Languages Component/Languages'
 
 const Targeting = () => {
   const dispatch = useDispatch()
@@ -35,6 +39,9 @@ const Targeting = () => {
   }
   const sourceDisable = () => {
     dispatch(toggleSourceDisable())
+  }
+  const languageDisable = () => {
+    dispatch(toggleLanguageDisable())
   }
 
   return (
@@ -127,14 +134,27 @@ const Targeting = () => {
         <div className={styles.section}>
           <div className={styles.title_wrapper}>
             <span className={styles.section_title}>Browser Language</span>
-            <OnOff check={disables.disableSource} isDisable={sourceDisable} />
+            {
+              <OnOff
+                check={disables.disableLanguage}
+                isDisable={languageDisable}
+              />
+            }
           </div>
-          {/* <Targeting_Input
-            type="text"
-            place="Enter your traffic source domain"
-            value="source"
-            disable={disables.disableSource}
-          /> */}
+          <div className={styles.languages}>
+            {/* Select Section */}
+            <SelectArea disable={disables.disableLanguage} />
+            <Languages />
+          </div>
+        </div>
+
+        {/******** Bu kısmın işlevinin ne olduğu belli değil ********/}
+        {/* Exit Intent Targeting Section */}
+        <div className={styles.section}>
+          <div className={styles.title_wrapper}>
+            <span className={styles.section_title}>Exit Intent Targeting</span>
+            {<OnOff />}
+          </div>
         </div>
       </div>
     </>

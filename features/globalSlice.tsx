@@ -22,8 +22,11 @@ const initialState: initialInterface = {
     disableDevice: false,
     disableSeconds: false,
     disableScroll: false,
-    disableSource: false
-  }
+    disableSource: false,
+    disableLanguage: false
+  },
+  // Languages
+  languages: []
 }
 
 export const globalSlice = createSlice({
@@ -58,6 +61,21 @@ export const globalSlice = createSlice({
     },
     toggleSourceDisable: (state) => {
       state.disables.disableSource = !state.disables.disableSource
+    },
+    toggleLanguageDisable: (state) => {
+      state.disables.disableLanguage = !state.disables.disableLanguage
+    },
+    // Languages
+    getLanguages: (state, action) => {
+      state.languages = [...state.languages, action.payload]
+    },
+    deleteLanguage: (state, action) => {
+      state.languages = state.languages.filter(
+        (lang) => lang !== action.payload
+      )
+    },
+    deleteAllLanguages: (state) => {
+      state.languages = []
     }
   }
 })
@@ -71,6 +89,10 @@ export const {
   toggleDeviceDisable,
   toggleSecondsDisable,
   toggleScrollDisable,
-  toggleSourceDisable
+  toggleSourceDisable,
+  toggleLanguageDisable,
+  getLanguages,
+  deleteLanguage,
+  deleteAllLanguages
 } = globalSlice.actions
 export default globalSlice.reducer

@@ -25,6 +25,7 @@ export interface disablesInterface {
   disableSeconds: boolean
   disableScroll: boolean
   disableSource: boolean
+  disableLanguage: boolean
 }
 
 // Input
@@ -62,6 +63,7 @@ export interface initialInterface {
   targetingDevice: targetInterface
   targetValues: targetingValuesInterface
   disables: disablesInterface
+  languages: string[]
 }
 
 // Devices
