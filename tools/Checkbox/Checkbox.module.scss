@@ -33,13 +33,13 @@
 
   &:hover input ~ .checkmark {
     background-color: $bg-template;
-    transition: $general-tansition;
+    transition: $general-transition;
   }
 
   & input:checked ~ .checkmark {
     background-color: $color-purple;
     border: 1px solid $color-purple;
-    transition: $general-tansition;
+    transition: $general-transition;
   }
 
   & input:checked ~ .checkmark:after {

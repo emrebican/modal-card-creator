@@ -17,7 +17,7 @@
     @include flex(flex, space-between, center);
     padding: 0 20px;
     border: 1px solid transparent;
-    transition: $general-tansition;
+    transition: $general-transition;
 
     .text {
       font-family: $ff-poppins;

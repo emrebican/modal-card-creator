@@ -49,7 +49,7 @@
       line-height: 22px;
       @include letter-spacing(-0.03em);
       cursor: pointer;
-      transition: $general-tansition;
+      transition: $general-transition;
 
       &:hover {
         box-shadow: 0px 5px 10px 2px rgba(125, 74, 234, 0.4);

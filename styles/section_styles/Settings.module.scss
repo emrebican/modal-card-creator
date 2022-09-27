@@ -1,0 +1,129 @@
+@import '../variables';
+
+.container {
+  .section {
+    margin-top: 30px;
+
+    .main_title {
+      font-family: $ff-poppins;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 36px;
+      @include letter-spacing(-0.03em);
+      color: $color-black;
+    }
+
+    .bottom_content {
+      @include flex(flex, center, flex-start);
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 15px;
+
+      span {
+        &:nth-child(1) {
+          font-family: $ff-poppins;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 18px;
+          color: $color-black;
+        }
+
+        &:nth-child(2) {
+          font-family: $ff-poppins;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 14px;
+          color: $color-black;
+
+          b {
+            font-size: 13px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .check_content {
+      margin-top: 15px;
+
+      .option {
+        @include flex(flex, flex-start, center);
+        gap: 10px;
+
+        font-family: $ff-poppins;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: $color-black;
+      }
+    }
+
+    .code_btn {
+      width: 184px;
+      height: 60px;
+      margin-top: 50px;
+      border-radius: 12px;
+      box-shadow: 0px 5px 10px 2px rgba(125, 74, 234, 0.27);
+      background-color: $color-purple;
+      color: $color-white;
+      font-family: $ff-poppins;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      @include letter-spacing(-0.03em);
+      border: none;
+      cursor: pointer;
+      transition: $general-transition;
+
+      &:hover {
+        box-shadow: 0px 5px 10px 4px rgba(125, 74, 234, 0.6);
+      }
+    }
+
+    .code_section {
+      width: 378px;
+      height: 260px;
+      background-color: $color-333;
+      border-radius: 8px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      position: relative;
+
+      .copy_btn {
+        position: absolute;
+        bottom: 14px;
+        right: 10px;
+
+        width: 129px;
+        height: 30px;
+        border: none;
+        background-color: $color-purple;
+        border-radius: 160px;
+        box-shadow: 0px 5px 10px 2px rgba(125, 74, 234, 0.27);
+        cursor: pointer;
+
+        font-family: $ff-poppins;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+        color: $color-white;
+        @include letter-spacing(-0.03em);
+      }
+    }
+
+    .alert_content {
+      width: 378px;
+      @include flex(flex, flex-start, flex-start);
+      gap: 6.33px;
+
+      .alert_text {
+        width: 331px;
+        font-family: $ff-poppins;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        color: $color-black;
+      }
+    }
+  }
+}
