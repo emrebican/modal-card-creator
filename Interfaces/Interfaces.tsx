@@ -74,3 +74,12 @@ export interface deviceInterface {
   device: boolean
   disable: boolean
 }
+
+/* Conversion */
+export interface conversionInterface {
+  icon: string
+  width: number
+  height: number
+  title: string
+  content: string
+}

@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+
+.wrapper {
+  width: 378px;
+  height: 267px;
+  border-radius: 12px;
+  background-color: $bg-modal;
+  @include flex(flex, center, center);
+  flex-direction: column;
+  font-family: $ff-poppins;
+  color: $color-black;
+  transition: $general-transition;
+
+  &:hover {
+    box-shadow: 0px 5px 10px 2px $color-light-gray;
+  }
+
+  .title {
+    margin-top: 24px;
+    margin-bottom: 10px;
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $color-black;
+  }
+
+  .content {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    width: 237px;
+    @include letter-spacing(-0.01em);
+  }
+}
