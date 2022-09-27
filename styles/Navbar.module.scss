@@ -14,6 +14,7 @@
   // logo
   .logo {
     @include flex(flex, center, center);
+    cursor: pointer;
 
     .title {
       margin-left: 10px;
@@ -46,6 +47,11 @@
       line-height: 18px;
       @include letter-spacing(-0.03em);
       text-transform: capitalize;
+      transition: $general-transition;
+
+      &:hover {
+        color: $color-purple;
+      }
     }
   }
 

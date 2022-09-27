@@ -7,10 +7,12 @@ const Navbar = () => {
   return (
     <nav className={styles.container}>
       <div className={styles.wrapper}>
-        <div className={styles.logo}>
-          <Image src="/images/logo.png" width={36} height={36} />
-          <span className={styles.title}>modal.cards</span>
-        </div>
+        <Link href="https://popupsmart.com/">
+          <div className={styles.logo}>
+            <Image src="/images/logo.png" width={36} height={36} />
+            <span className={styles.title}>modal.cards</span>
+          </div>
+        </Link>
 
         <div className={styles.links}>
           <Link href="/">

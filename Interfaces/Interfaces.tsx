@@ -78,8 +78,8 @@ export interface deviceInterface {
 /* Conversion */
 export interface conversionInterface {
   icon: string
-  width: number
-  height: number
+  width?: number
+  height?: number
   title: string
   content: string
 }

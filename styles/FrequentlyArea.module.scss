@@ -1,0 +1,15 @@
+@import 'variables';
+
+.container {
+  text-align: center;
+  margin-top: 120px;
+
+  .main_title {
+    font-family: $ff-poppins;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 48px;
+    @include letter-spacing(-0.03em);
+    color: $color-black;
+  }
+}
