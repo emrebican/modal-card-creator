@@ -9,11 +9,11 @@
   @include flex(flex, center, center);
   gap: 10px;
 
-  /*   .logo {
+  .logo {
     width: 22px;
     height: 18px;
     color: #999;
-  } */
+  }
 
   .type {
     font-family: $ff-poppins;

@@ -12,4 +12,9 @@
     @include letter-spacing(-0.03em);
     color: $color-black;
   }
+
+  .items {
+    margin-top: 50px;
+    border-bottom: 1px solid $border-modal;
+  }
 }

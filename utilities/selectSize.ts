@@ -1,4 +1,5 @@
 import { changeTempSize } from '../features/globalSlice'
+import { active_Classes } from '../constants/constants'
 
 export const selectSize = (
   type: string,
@@ -10,11 +11,11 @@ export const selectSize = (
   let elements = ref.current.children
 
   let btns = [...elements]
-  btns.forEach((el) => el.classList.remove('Appearance_active_size__6iiE9'))
+  btns.forEach((el) => el.classList.remove(active_Classes.appearance))
 
   btns.filter((element) => {
     if (element.innerHTML == type) {
-      element.classList.add('Appearance_active_size__6iiE9')
+      element.classList.add(active_Classes.appearance)
     }
 
     if (type == 'small') {

@@ -70,7 +70,6 @@ export interface initialInterface {
 // Devices
 export interface deviceInterface {
   type: string
-  logo: string
   device: boolean
   disable: boolean
 }
@@ -82,4 +81,13 @@ export interface conversionInterface {
   height?: number
   title: string
   content: string
+}
+
+/* FAQ Interface */
+export interface faqInterface {
+  title: string
+  content: string
+  icon: any
+  handleOpen: any
+  handleClose: any
 }

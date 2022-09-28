@@ -32,6 +32,8 @@ const Targeting_Input = ({ type, place, value, disable }: inputInterface) => {
         onChange={handleChange}
         disabled={disable}
         value={targetValues[value]}
+        min={0}
+        max={100}
       />
     </div>
   )

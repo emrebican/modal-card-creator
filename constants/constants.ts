@@ -13,6 +13,12 @@ interface fontInterface {
   ff_Poppins: string
 }
 
+interface activeInterface {
+  active: string
+  non_active: string
+  appearance: string
+}
+
 export const colors: colorInterface = {
   Black: '#000',
   White: '#fff',
@@ -26,4 +32,10 @@ export const colors: colorInterface = {
 export const fonts: fontInterface = {
   ff_Inter: 'Inter',
   ff_Poppins: 'Poppins'
+}
+
+export const active_Classes: activeInterface = {
+  active: 'FAQItem_wrapper_active__DYKdV',
+  non_active: 'FAQItem_wrapper__jIZQ8',
+  appearance: 'Appearance_active_size__6iiE9'
 }

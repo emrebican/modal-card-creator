@@ -1,0 +1,104 @@
+@import '../../styles/variables';
+
+.wrapper {
+  height: 74px;
+  padding: 0 30px;
+  @include flex(flex, center, flex-start);
+  @include letter-spacing(-0.01em);
+  flex-direction: column;
+  gap: 10px;
+  font-family: $ff-poppins;
+  color: $color-black;
+  transition: $general-transition;
+  border-top: 1px solid $border-modal;
+  transition: $general-transition;
+
+  .title_wrapper {
+    width: 100%;
+    @include flex(flex, space-between, center);
+
+    img {
+      cursor: pointer;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+    }
+
+    .close_btn {
+      display: none;
+    }
+  }
+
+  .content {
+    width: 839px;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    display: none;
+    transition: $general-transition;
+  }
+}
+
+.wrapper_active {
+  height: 177px;
+  padding: 0 30px;
+  @include flex(flex, center, flex-start);
+  @include letter-spacing(-0.01em);
+  flex-direction: column;
+  gap: 10px;
+  font-family: $ff-poppins;
+  color: $color-black;
+  transition: $general-transition;
+  border-top: 1px solid $border-modal;
+  background-color: $bg-modal;
+  transition: $general-transition;
+
+  .title_wrapper {
+    width: 100%;
+    @include flex(flex, space-between, center);
+    position: relative;
+
+    margin-top: 25px;
+    margin-bottom: 10px;
+
+    img {
+      cursor: pointer;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+    }
+
+    .close_btn {
+      position: absolute;
+      content: '';
+      width: 25px;
+      height: 25px;
+      top: 0;
+      right: 0;
+      // background-color: red;
+      // border: 1px solid red;
+      z-index: 50;
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    width: 839px;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    display: block;
+    transition: $general-transition;
+  }
+}

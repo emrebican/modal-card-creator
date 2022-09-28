@@ -72,7 +72,6 @@ const Targeting = () => {
               <Device
                 device={devices.desktop}
                 type="Desktop"
-                logo="/images/desktop_logo.svg"
                 disable={disables.disableDevice}
               />
             </div>
@@ -87,7 +86,6 @@ const Targeting = () => {
               <Device
                 device={devices.mobile}
                 type="Mobile"
-                logo="/images/mobile_logo.svg"
                 disable={disables.disableDevice}
               />
             </div>
