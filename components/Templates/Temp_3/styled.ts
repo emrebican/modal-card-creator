@@ -60,49 +60,6 @@ const Temp_3_Bottom = styled.div`
       width: 100%;
       flex-direction: column;
       gap: 15px;
-
-      input {
-        height: 47px;
-        border-radius: 12px;
-        outline: none;
-        border: 1px solid ${colors.BlueGray};
-        padding: 0 14.5px;
-
-        font-family: ${fonts.ff_Inter};
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        color: ${colors.Black};
-
-        &::placeholder {
-          font-family: ${fonts.ff_Inter};
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 19px;
-          color: ${colors.Black};
-        }
-
-        :nth-child(2n) {
-          margin-bottom: 15.5px;
-        }
-      }
-    }
-
-    /* BOTTOM */
-    .temp_3_bottom {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      margin-top: 20px;
-
-      span {
-        font-family: ${fonts.ff_Inter};
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
-        color: ${colors.Black};
-        cursor: pointer;
-      }
     }
   }
 `
