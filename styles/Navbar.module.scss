@@ -9,6 +9,10 @@
 
   .wrapper {
     @include flex(flex, space-between, center);
+
+    a {
+      text-decoration: none;
+    }
   }
 
   // logo

@@ -10,7 +10,7 @@ import Sign_Up_Btn from '../../../abstracts/Sign_Up_Btn/Sign_Up_Btn'
 // Constants
 import { colors } from '../../../constants/constants'
 
-const Temp_1 = () => {
+const Temp_2 = () => {
   /* Width & Height */
   const width_value: number = useSelector(
     (state: RootState) => state.global.templateSize.width
@@ -28,17 +28,21 @@ const Temp_1 = () => {
   )
 
   return (
-    <S.Temp_1_Container width_value={width_value} height_value={height_value}>
-      <S.Temp_1_Left>
-        <div className="temp_1_section">
-          <span className="temp_1_title">
-            {templateContent?.heading || 'Sign up'}
+    <S.Temp_2_Container width_value={width_value} height_value={height_value}>
+      <S.Temp_2_Top>
+        <Rounded_Cancel_Btn top_value={'21px'} right_value={'20px'} />
+      </S.Temp_2_Top>
+      <S.Temp_2_Bottom>
+        <div className="temp_2_section">
+          <span className="temp_2_title">
+            {templateContent?.heading || 'Hello stranger'}
           </span>
-          <span className="temp_1_text">
-            {templateContent?.text || 'Join new adventure'}
+          <span className="temp_2_text">
+            {templateContent?.text || 'Sign up now and get 30% discount'}
           </span>
+
           {/* FORM */}
-          <div className="temp_1_form">
+          <div className="temp_2_form">
             <input
               type="text"
               placeholder={templateContent?.input_1 || 'Enter full name'}
@@ -55,25 +59,25 @@ const Temp_1 = () => {
                   : colors.White
               }
               bg_clr={buttonColor}
-              width_value="300px"
+              width_value={width_value < 480 ? '300px' : '350px'}
               height_value="48px"
               border_value="none"
             />
           </div>
-          <div className="temp_1_bottom">
+          <div
+            className="temp_2_bottom"
+            style={{
+              margin: width_value < 480 ? '10px 0' : ''
+            }}
+          >
             <span>
-              {templateContent?.bottom_text ||
-                'By signing up, you agree to Privacy Policy'}
+              {templateContent?.bottom_text || 'Already have an account?'}
             </span>
           </div>
         </div>
-      </S.Temp_1_Left>
-
-      <S.Temp_1_Right>
-        <Rounded_Cancel_Btn top_value={'23px'} right_value={'23px'} />
-      </S.Temp_1_Right>
-    </S.Temp_1_Container>
+      </S.Temp_2_Bottom>
+    </S.Temp_2_Container>
   )
 }
 
-export default Temp_1
+export default Temp_2

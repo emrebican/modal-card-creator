@@ -8,10 +8,12 @@ const Navbar = () => {
     <nav className={styles.container}>
       <div className={styles.wrapper}>
         <Link href="https://popupsmart.com/">
-          <div className={styles.logo}>
-            <Image src="/images/logo.png" width={36} height={36} />
-            <span className={styles.title}>modal.cards</span>
-          </div>
+          <a target="_blank" rel="noopener noreferrer">
+            <div className={styles.logo}>
+              <Image src="/images/logo.png" width={36} height={36} />
+              <span className={styles.title}>modal.cards</span>
+            </div>
+          </a>
         </Link>
 
         <div className={styles.links}>

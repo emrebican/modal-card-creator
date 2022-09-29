@@ -21,24 +21,13 @@ const Footer = () => {
       <div className={styles.foot}>
         <Image src="/popupsmart_icon.png" width={32} height={32} />
         <Link href="https://popupsmart.com/">
-          <span className={styles.text}>Powered by Popupsmart</span>
+          <a target="_blank" rel="noopener noreferrer">
+            <span className={styles.text}>Powered by Popupsmart</span>
+          </a>
         </Link>
       </div>
     </footer>
   )
 }
-/* En altta Conversion & UX ready popups & modals ile başlayan kısın olacak*/
-export default Footer
 
-{
-  /*   <a
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by{' '}
-        <span>
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </span>
-      </a> */
-}
+export default Footer

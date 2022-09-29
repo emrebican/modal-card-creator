@@ -1,7 +1,7 @@
 import * as S from './styled'
 import { RoundedCancelBtnInterface } from '../../Interfaces/Interfaces'
 
-const Rounded_Cancel_btn = ({
+const Rounded_Cancel_Btn = ({
   top_value,
   right_value
 }: RoundedCancelBtnInterface) => {
@@ -17,4 +17,4 @@ const Rounded_Cancel_btn = ({
   )
 }
 
-export default Rounded_Cancel_btn
+export default Rounded_Cancel_Btn

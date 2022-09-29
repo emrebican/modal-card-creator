@@ -19,16 +19,14 @@ const Device = ({ type, device, disable }: deviceInterface) => {
       {type == 'Desktop' ? (
         <MdComputer
           className={styles.logo}
-          style={{ color: devices.desktop === true ? colors.Purple : '' }}
+          style={{ color: devices.desktop === true ? colors.Purple : '#999' }}
         />
       ) : (
         <BiMobile
           className={styles.logo}
-          style={{ color: devices.mobile === true ? colors.Purple : '' }}
+          style={{ color: devices.mobile === true ? colors.Purple : '#999' }}
         />
       )}
-      {/* <MdComputer className={styles.logo} /> */}
-      {/* <Image src={logo} width={18} height={18} /> */}
       <span className={styles.type}>{type}</span>
     </div>
   )

@@ -9,8 +9,6 @@ const SelectArea = ({ disable }: any) => {
   const languages = useSelector((state: RootState) => state.global.languages)
   const [lang, setLang] = useState('')
 
-  console.log(languages)
-
   const handleLang = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLang(e.target.value)
     languages.length < 3 &&

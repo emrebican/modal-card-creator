@@ -6,7 +6,8 @@ import { initialInterface } from '../Interfaces/Interfaces'
 
 const initialState: initialInterface = {
   buttonColor: colors.Purple,
-  templateSize: { width: 740, height: 443 },
+  // templateSize: { width: 740, height: 443 },
+  templateSize: { width: 480, height: 752 },
   templateContent: null,
   // Device
   targetingDevice: {
