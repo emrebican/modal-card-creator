@@ -3,6 +3,7 @@ import Temp_1 from '../../components/Templates/Temp_1/Temp_1'
 import Temp_2 from '../../components/Templates/Temp_2/Temp_2'
 import Temp_3 from '../../components/Templates/Temp_3/Temp_3'
 import Temp_4 from '../../components/Templates/Temp_4/Temp_4'
+import Temp_5 from '../../components/Templates/Temp_5/Temp_5'
 
 import { useSelector } from 'react-redux'
 import { RootState } from '../../features/store'
@@ -26,6 +27,8 @@ const TempDisplayArea = () => {
         return <Temp_3 />
       case 3:
         return <Temp_4 />
+      case 4:
+        return <Temp_5 />
       default:
         return <Temp_1 />
     }
