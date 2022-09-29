@@ -1,5 +1,7 @@
 import { changeTempSize } from '../features/globalSlice'
 import { active_Classes } from '../constants/constants'
+import { useSelector } from 'react-redux'
+import { RootState } from '../features/store'
 
 export const selectSize = (
   type: string,

@@ -5,9 +5,9 @@ import { colors } from '../constants/constants'
 import { initialInterface } from '../Interfaces/Interfaces'
 
 const initialState: initialInterface = {
+  templateNumber: 0,
   buttonColor: colors.Purple,
-  // templateSize: { width: 740, height: 443 },
-  templateSize: { width: 480, height: 752 },
+  templateSize: { width: 740, height: 443 },
   templateContent: null,
   // Device
   targetingDevice: {
@@ -41,6 +41,13 @@ export const globalSlice = createSlice({
     },
     changeBtnColor: (state, action) => {
       state.buttonColor = action.payload
+    },
+    getTempNumber: (state, action) => {
+      state.templateNumber = action.payload.number
+      state.templateSize = {
+        width: action.payload.width,
+        height: action.payload.height
+      }
     },
     getTempContent: (state, action) => {
       state.templateContent = action.payload
@@ -89,6 +96,7 @@ export const globalSlice = createSlice({
 export const {
   changeTempSize,
   changeBtnColor,
+  getTempNumber,
   getTempContent,
   getTargeting,
   getTargetValues,

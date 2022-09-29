@@ -67,7 +67,7 @@ const Temp_2 = () => {
           <div
             className="temp_2_bottom"
             style={{
-              margin: width_value < 480 ? '10px 0' : ''
+              margin: width_value < 480 ? '10px 0' : '20px 0 0 0'
             }}
           >
             <span>

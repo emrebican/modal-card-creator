@@ -54,6 +54,7 @@ export interface SignUpBtnInterface {
 
 // Initial Interface
 export interface initialInterface {
+  templateNumber: number
   buttonColor: string
   templateSize: {
     width: number

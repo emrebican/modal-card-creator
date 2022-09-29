@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react'
 
 import { changeBtnColor } from '../../features/globalSlice'
 import { selectSize } from '../../utilities/selectSize'
+import { resetSizeBtn } from '../../utilities/resetSizeBtn'
 
 // Components
 import Title from '../Section Titles/Title'
@@ -21,17 +22,22 @@ const Appearance = () => {
 
   // Template Size
   const [size, setSize] = useState({ width: 0, height: 0 })
+  console.log('size: ', size)
 
-  useEffect(() => {
-    setSize({ width: width_value, height: height_value })
-  }, [])
-
+  const tempNumber = useSelector(
+    (state: RootState) => state.global.templateNumber
+  )
   const width_value: number = useSelector(
     (state: RootState) => state.global.templateSize.width
   )
   const height_value: number = useSelector(
     (state: RootState) => state.global.templateSize.height
   )
+
+  useEffect(() => {
+    setSize({ width: width_value, height: height_value })
+    resetSizeBtn(refDiv)
+  }, [tempNumber])
 
   return (
     <>
