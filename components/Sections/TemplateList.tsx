@@ -5,6 +5,7 @@ import { templatesData } from '../../data/templatesData'
 
 import { useDispatch } from 'react-redux'
 import { getTempNumber } from '../../features/globalSlice'
+import Temp_3 from '../Templates/Temp_3/Temp_3'
 
 const TemplateList = () => {
   const dispatch = useDispatch()

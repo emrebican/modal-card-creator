@@ -57,7 +57,11 @@ const Temp_1 = () => {
               bg_clr={buttonColor}
               width_value="300px"
               height_value="48px"
-              border_value="none"
+              border_value={
+                buttonColor == colors.White
+                  ? `1px solid ${colors.BlueGray}`
+                  : 'none'
+              }
             />
           </div>
           <div className="temp_1_bottom">

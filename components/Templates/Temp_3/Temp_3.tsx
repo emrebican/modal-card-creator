@@ -10,7 +10,7 @@ import Sign_Up_Btn from '../../../abstracts/Sign_Up_Btn/Sign_Up_Btn'
 // Constants
 import { colors } from '../../../constants/constants'
 
-const Temp_2 = () => {
+const Temp_3 = () => {
   /* Width & Height */
   const width_value: number = useSelector(
     (state: RootState) => state.global.templateSize.width
@@ -28,31 +28,23 @@ const Temp_2 = () => {
   )
 
   return (
-    <S.Temp_2_Container width_value={width_value} height_value={height_value}>
-      <S.Temp_2_Top>
-        <Rounded_Cancel_Btn top_value={'21px'} right_value={'20px'} />
-      </S.Temp_2_Top>
-      <S.Temp_2_Bottom>
-        <div className="temp_2_section">
-          <span className="temp_2_title">
-            {templateContent?.heading || 'Hello stranger'}
+    <S.Temp_3_Container width_value={width_value} height_value={height_value}>
+      <S.Temp_3_Top>
+        <Rounded_Cancel_Btn top_value={'23px'} right_value={'23px'} />
+      </S.Temp_3_Top>
+      <S.Temp_3_Bottom>
+        <div className="temp_3_section">
+          <span className="temp_3_title">
+            {templateContent?.heading || 'Install local now'}
           </span>
-          <span className="temp_2_text">
-            {templateContent?.text || 'Sign up now and get 30% discount'}
+          <span className="temp_3_text">
+            {templateContent?.text || 'We’ve gone native, try it!'}
           </span>
 
           {/* FORM */}
-          <div className="temp_2_form">
-            <input
-              type="text"
-              placeholder={templateContent?.input_1 || 'Enter full name'}
-            />
-            <input
-              type="text"
-              placeholder={templateContent?.input_2 || 'Enter your email'}
-            />
+          <div className="temp_3_form">
             <Sign_Up_Btn
-              text={templateContent?.btn_text || 'Sign up'}
+              text={templateContent?.btn_text1 || 'Continue'}
               clr={
                 buttonColor === colors.LightGray || buttonColor === colors.White
                   ? colors.Black
@@ -67,21 +59,19 @@ const Temp_2 = () => {
                   : 'none'
               }
             />
-          </div>
-          <div
-            className="temp_2_bottom"
-            style={{
-              margin: width_value < 480 ? '10px 0' : '20px 0 0 0'
-            }}
-          >
-            <span>
-              {templateContent?.bottom_text || 'Already have an account?'}
-            </span>
+            <Sign_Up_Btn
+              text={templateContent?.btn_text2 || 'Not now'}
+              clr={colors.Black}
+              bg_clr="transparent"
+              width_value={width_value < 480 ? '300px' : '350px'}
+              height_value="48px"
+              border_value={`1px solid ${colors.BlueGray}`}
+            />
           </div>
         </div>
-      </S.Temp_2_Bottom>
-    </S.Temp_2_Container>
+      </S.Temp_3_Bottom>
+    </S.Temp_3_Container>
   )
 }
 
-export default Temp_2
+export default Temp_3
