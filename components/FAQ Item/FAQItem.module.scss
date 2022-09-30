@@ -9,7 +9,6 @@
   gap: 10px;
   font-family: $ff-poppins;
   color: $color-black;
-  transition: $general-transition;
   border-top: 1px solid $border-modal;
   transition: $general-transition;
 
@@ -40,7 +39,6 @@
     line-height: 26px;
     text-align: left;
     display: none;
-    transition: $general-transition;
   }
 }
 
@@ -53,10 +51,8 @@
   gap: 10px;
   font-family: $ff-poppins;
   color: $color-black;
-  transition: $general-transition;
   border-top: 1px solid $border-modal;
   background-color: $bg-modal;
-  transition: $general-transition;
 
   .title_wrapper {
     width: 100%;
@@ -83,8 +79,6 @@
       height: 25px;
       top: 0;
       right: 0;
-      // background-color: red;
-      // border: 1px solid red;
       z-index: 50;
       display: block;
       cursor: pointer;
@@ -99,6 +93,5 @@
     line-height: 26px;
     text-align: left;
     display: block;
-    transition: $general-transition;
   }
 }

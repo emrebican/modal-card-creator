@@ -1,0 +1,82 @@
+@import '../../styles/variables';
+
+.wrapper {
+  @include flex(flex, center, flex-start);
+  flex-direction: column;
+  font-family: $ff-inter;
+
+  .text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    color: $color-radio;
+    margin-left: 33.5px;
+  }
+
+  /* --------------- CUSTOM RADIO BUTTON ---------------- */
+  .radio_container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    color: $color-black;
+    text-transform: capitalize;
+  }
+
+  .radio_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    border: 1px solid $color-radio;
+    border-radius: 50%;
+    transition: $general-transition;
+  }
+
+  .radio_container:hover input ~ .checkmark {
+    border: 1px solid $color-purple;
+    box-shadow: 0px 0px 5px 1.2px $color-purple;
+  }
+
+  .radio_container input:checked ~ .checkmark {
+    background-color: $color-purple;
+    box-shadow: none;
+  }
+
+  .checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+
+  .radio_container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .radio_container .checkmark:after {
+    top: 8px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+  /* -------------------------------------- */
+}

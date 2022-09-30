@@ -36,6 +36,12 @@ export interface inputInterface {
   disable: boolean
 }
 
+// Radio
+export interface radioInterface {
+  label_text: string
+  info_text: string
+}
+
 // Rounded Cancel Btn
 export interface RoundedCancelBtnInterface {
   top_value: string
