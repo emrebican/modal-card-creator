@@ -5,16 +5,14 @@ import { useDispatch } from 'react-redux'
 
 import { getTempContent } from '../../../features/globalSlice'
 
-const Temp_1_Input = () => {
+const Temp_9_Input = () => {
   const dispatch = useDispatch()
 
   const [content, setContent] = useState({
     heading: '',
     text: '',
-    input_1: '',
-    input_2: '',
-    btn_text: '',
-    bottom_text: ''
+    btn_text1: '',
+    btn_text2: ''
   })
 
   const handleContent = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,7 +33,7 @@ const Temp_1_Input = () => {
       <input
         type="text"
         placeholder="Enter heading"
-        maxLength={12}
+        maxLength={16}
         name="heading"
         value={content.heading}
         onChange={handleContent}
@@ -43,45 +41,29 @@ const Temp_1_Input = () => {
       <input
         type="text"
         placeholder="Enter Information"
-        maxLength={20}
+        maxLength={35}
         name="text"
         value={content.text}
         onChange={handleContent}
       />
       <input
         type="text"
-        placeholder="Enter a placeholder"
-        maxLength={25}
-        name="input_1"
-        value={content.input_1}
-        onChange={handleContent}
-      />
-      <input
-        type="text"
-        placeholder="Enter a place holder"
-        maxLength={25}
-        name="input_2"
-        value={content.input_2}
+        placeholder="Enter button text"
+        maxLength={12}
+        name="btn_text1"
+        value={content.btn_text1}
         onChange={handleContent}
       />
       <input
         type="text"
         placeholder="Enter button text"
-        maxLength={15}
-        name="btn_text"
-        value={content.btn_text}
-        onChange={handleContent}
-      />
-      <input
-        type="text"
-        placeholder="Enter bottom text"
-        maxLength={45}
-        name="bottom_text"
-        value={content.bottom_text}
+        maxLength={12}
+        name="btn_text2"
+        value={content.btn_text2}
         onChange={handleContent}
       />
     </div>
   )
 }
 
-export default Temp_1_Input
+export default Temp_9_Input

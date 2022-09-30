@@ -1,30 +1,47 @@
 import styled from 'styled-components'
 import { colors, fonts } from '../../../constants/constants'
 
-const Temp_1_Container = styled.div`
+const Temp_10_Container = styled.div`
   width: ${(props: any) => props.width_value + 'px'};
   height: ${(props: any) => props.height_value + 'px'};
   display: flex;
   transition: all ease 0.4s;
 `
 
-const Temp_1_Left = styled.div`
+const Temp_10_Left = styled.div`
   /* flex: 1; */
-  flex: ${(props: any) => (props.width_value < 740 ? 0.8 : 1)};
+  position: relative;
+  width: 550px;
+  background-image: url('/template_images/temp10_image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  overflow: hidden;
+`
+
+const Temp_10_Right = styled.div`
+  /* flex: 1; */
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 380px;
+  height: 443px;
+  transform: translateY(-50%);
+  border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top-left-radius: 14px;
-  border-bottom-left-radius: 14px;
-  background-color: ${colors.White};
+  background-color: #fff;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.15);
 
-  .temp_1_section {
-    width: ${(props: any) => (props.width_value < 740 ? '260px' : '300px')};
+  .temp_10_section {
+    width: 300px;
     margin: 0 40.5px;
+    /* margin-top: 49px; */
     display: flex;
     flex-direction: column;
 
-    .temp_1_title {
+    .temp_10_title {
       font-family: ${fonts.ff_Inter};
       font-size: 36px;
       font-weight: 700;
@@ -32,7 +49,7 @@ const Temp_1_Left = styled.div`
       color: ${colors.Black};
     }
 
-    .temp_1_text {
+    .temp_10_text {
       font-family: ${fonts.ff_Inter};
       font-weight: 400;
       font-size: 24px;
@@ -43,7 +60,7 @@ const Temp_1_Left = styled.div`
     }
 
     /* FORM */
-    .temp_1_form {
+    .temp_10_form {
       display: flex;
       width: 100%;
       flex-direction: column;
@@ -60,14 +77,12 @@ const Temp_1_Left = styled.div`
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
-        color: ${colors.Black};
 
         &::placeholder {
           font-family: ${fonts.ff_Inter};
           font-weight: 400;
           font-size: 16px;
           line-height: 19px;
-          color: ${colors.Black};
         }
 
         :nth-child(2n) {
@@ -77,13 +92,11 @@ const Temp_1_Left = styled.div`
     }
 
     /* BOTTOM */
-    .temp_1_bottom {
+    .temp_10_bottom {
       display: flex;
       justify-content: space-between;
       width: 100%;
       margin-top: 20px;
-      text-align: ${(props: any) =>
-        props.width_value < 740 ? 'center' : 'left'};
 
       span {
         font-family: ${fonts.ff_Inter};
@@ -97,14 +110,4 @@ const Temp_1_Left = styled.div`
   }
 `
 
-const Temp_1_Right = styled.div`
-  flex: ${(props: any) => (props.width_value < 740 ? 1.5 : 1)};
-  position: relative;
-  background-image: url('/template_images/temp1_image.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-top-right-radius: 14px;
-  border-bottom-right-radius: 14px;
-`
-
-export { Temp_1_Container, Temp_1_Left, Temp_1_Right }
+export { Temp_10_Container, Temp_10_Left, Temp_10_Right }

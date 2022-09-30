@@ -10,7 +10,7 @@ import Sign_Up_Btn from '../../../abstracts/Sign_Up_Btn/Sign_Up_Btn'
 // Constants
 import { colors } from '../../../constants/constants'
 
-const Temp_1 = () => {
+const Temp_10 = () => {
   /* Width & Height */
   const width_value: number = useSelector(
     (state: RootState) => state.global.templateSize.width
@@ -28,17 +28,21 @@ const Temp_1 = () => {
   )
 
   return (
-    <S.Temp_1_Container width_value={width_value} height_value={height_value}>
-      <S.Temp_1_Left width_value={width_value}>
-        <div className="temp_1_section">
-          <span className="temp_1_title">
+    <S.Temp_10_Container width_value={width_value} height_value={height_value}>
+      <S.Temp_10_Left></S.Temp_10_Left>
+
+      <S.Temp_10_Right>
+        <Rounded_Cancel_Btn top_value={'23px'} right_value={'23px'} />
+
+        <div className="temp_10_section">
+          <span className="temp_10_title">
             {templateContent?.heading || 'Sign up'}
           </span>
-          <span className="temp_1_text">
+          <span className="temp_10_text">
             {templateContent?.text || 'Join new adventure'}
           </span>
           {/* FORM */}
-          <div className="temp_1_form">
+          <div className="temp_10_form">
             <input
               type="text"
               placeholder={templateContent?.input_1 || 'Enter full name'}
@@ -55,7 +59,7 @@ const Temp_1 = () => {
                   : colors.White
               }
               bg_clr={buttonColor}
-              width_value={width_value < 740 ? '260px' : '300px'}
+              width_value="300px"
               height_value="48px"
               border_value={
                 buttonColor == colors.White
@@ -64,20 +68,16 @@ const Temp_1 = () => {
               }
             />
           </div>
-          <div className="temp_1_bottom">
+          <div className="temp_10_bottom">
             <span>
               {templateContent?.bottom_text ||
                 'By signing up, you agree to Privacy Policy'}
             </span>
           </div>
         </div>
-      </S.Temp_1_Left>
-
-      <S.Temp_1_Right width_value={width_value}>
-        <Rounded_Cancel_Btn top_value={'23px'} right_value={'23px'} />
-      </S.Temp_1_Right>
-    </S.Temp_1_Container>
+      </S.Temp_10_Right>
+    </S.Temp_10_Container>
   )
 }
 
-export default Temp_1
+export default Temp_10

@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux'
 
 import { getTempContent } from '../../../features/globalSlice'
 
-const Temp_1_Input = () => {
+const Temp_10_Input = () => {
   const dispatch = useDispatch()
 
   const [content, setContent] = useState({
@@ -75,7 +75,7 @@ const Temp_1_Input = () => {
       <input
         type="text"
         placeholder="Enter bottom text"
-        maxLength={45}
+        maxLength={42}
         name="bottom_text"
         value={content.bottom_text}
         onChange={handleContent}
@@ -84,4 +84,4 @@ const Temp_1_Input = () => {
   )
 }
 
-export default Temp_1_Input
+export default Temp_10_Input
