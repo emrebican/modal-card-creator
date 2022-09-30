@@ -1,11 +1,9 @@
 import styles from '../../styles/section_styles/TemplateList.module.scss'
 import Title from '../Section Titles/Title'
-import Temp_1 from '../Templates/Temp_1/Temp_1'
 import { templatesData } from '../../data/templatesData'
 
 import { useDispatch } from 'react-redux'
 import { getTempNumber } from '../../features/globalSlice'
-import Temp_3 from '../Templates/Temp_3/Temp_3'
 
 const TemplateList = () => {
   const dispatch = useDispatch()
