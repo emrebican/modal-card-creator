@@ -34,7 +34,6 @@ const Temp_5_Container = styled.div`
       line-height: 24.2px;
       color: ${colors.Black};
       margin-top: 20px;
-      margin-bottom: 41.5px;
       text-align: center;
     }
 
@@ -57,7 +56,6 @@ const Temp_5_Container = styled.div`
         font-size: 16px;
         line-height: 19px;
         color: ${colors.Black};
-        margin-bottom: 31px;
 
         &::placeholder {
           font-family: ${fonts.ff_Inter};

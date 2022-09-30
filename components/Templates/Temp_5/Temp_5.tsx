@@ -36,7 +36,10 @@ const Temp_5 = () => {
         <span className="temp_5_title">
           {templateContent?.heading || 'Join our mail list'}
         </span>
-        <span className="temp_5_text">
+        <span
+          className="temp_5_text"
+          style={{ marginBottom: width_value < 480 ? '20px' : '41.5px' }}
+        >
           {templateContent?.text || 'Save up to 30% of your next order'}
         </span>
 
@@ -46,6 +49,7 @@ const Temp_5 = () => {
             type="text"
             placeholder={templateContent?.input_1 || 'Enter your email'}
             width_value={width_value}
+            style={{ marginBottom: width_value < 480 ? '20px' : '31px' }}
           />
         </div>
         {/* Buttons */}
