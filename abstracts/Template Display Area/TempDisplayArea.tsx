@@ -10,6 +10,7 @@ import Temp_8 from '../../components/Templates/Temp_8/Temp_8'
 import Temp_9 from '../../components/Templates/Temp_9/Temp_9'
 import Temp_10 from '../../components/Templates/Temp_10/Temp_10'
 import Temp_11 from '../../components/Templates/Temp_11/Temp_11'
+import Temp_12 from '../../components/Templates/Temp_12/Temp_12'
 
 import { useSelector } from 'react-redux'
 import { RootState } from '../../features/store'
@@ -47,6 +48,8 @@ const TempDisplayArea = () => {
         return <Temp_10 />
       case 10:
         return <Temp_11 />
+      case 11:
+        return <Temp_12 />
       default:
         return <Temp_1 />
     }

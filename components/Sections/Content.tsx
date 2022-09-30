@@ -15,6 +15,7 @@ import Temp_8_Input from '../Templates/Temp_8/Temp_8_Input'
 import Temp_9_Input from '../Templates/Temp_9/Temp_9_Input'
 import Temp_10_Input from '../Templates/Temp_10/Temp_10_Input'
 import Temp_11_Input from '../Templates/Temp_11/Temp_11_Input'
+import Temp_12_Input from '../Templates/Temp_12/Temp_12_Input'
 
 const Content = () => {
   const templateNumber = useSelector(
@@ -45,6 +46,8 @@ const Content = () => {
         return <Temp_10_Input />
       case 10:
         return <Temp_11_Input />
+      case 11:
+        return <Temp_12_Input />
       default:
         return <Temp_1_Input />
     }
