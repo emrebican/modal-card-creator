@@ -34,5 +34,17 @@ export const templatesData = [
     id: 5,
     width: 480,
     height: 516
+  },
+  // Temp 7
+  {
+    id: 6,
+    width: 480,
+    height: 584
+  },
+  // Temp 8
+  {
+    id: 7,
+    width: 480,
+    height: 283
   }
 ]
