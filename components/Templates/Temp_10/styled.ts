@@ -12,9 +12,10 @@ const Temp_10_Left = styled.div`
   /* flex: 1; */
   position: relative;
   width: 550px;
-  background-image: url('/template_images/temp10_image.png');
+  /* background-image: url('/template_images/temp10_image.png'); */
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   border-radius: 16px;
   overflow: hidden;
 `

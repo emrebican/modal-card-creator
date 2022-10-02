@@ -66,14 +66,18 @@ const Temp_6_Container = styled.div`
 `
 
 const Icon = styled.div`
-  width: 90px;
-  height: 90px;
+  width: ${(props: any) => (props.img ? '96px' : '90px')};
+  height: ${(props: any) => (props.img ? '96px' : '90px')};
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: ${(props: any) =>
     props.color !== colors.White ? props.color : colors.Purple};
+
+  .temp_6_img {
+    border-radius: ${(props: any) => (props.img ? '50%' : '0%')};
+  }
 `
 
 export { Temp_6_Container, Icon }

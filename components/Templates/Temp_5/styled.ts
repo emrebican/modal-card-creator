@@ -18,6 +18,12 @@ const Temp_5_Container = styled.div`
     flex-direction: column;
     align-items: center;
 
+    .temp_5_img {
+      /* border-radius: 50%; */
+      border-radius: ${(props: any) => (props.img ? '50%' : '0%')};
+  }
+    }
+
     .temp_5_title {
       font-family: ${fonts.ff_Inter};
       font-size: 30px;

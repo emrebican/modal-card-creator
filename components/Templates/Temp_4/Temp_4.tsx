@@ -12,17 +12,12 @@ import Sign_Up_Btn from '../../../abstracts/Sign_Up_Btn/Sign_Up_Btn'
 import { colors } from '../../../constants/constants'
 
 const Temp_4 = () => {
-  /* Width & Height */
-  const width_value: number = useSelector(
-    (state: RootState) => state.global.templateSize.width
-  )
-  const height_value: number = useSelector(
-    (state: RootState) => state.global.templateSize.height
-  )
+  const global = useSelector((state: RootState) => state.global)
 
-  const templateContent = useSelector(
-    (state: RootState) => state.global.templateContent
-  )
+  const width_value: number = global.templateSize.width
+  const height_value: number = global.templateSize.height
+  const templateContent = global.templateContent
+  const image: any = global.image
 
   const buttonColor = useSelector(
     (state: RootState) => state.global.buttonColor
@@ -31,11 +26,13 @@ const Temp_4 = () => {
   return (
     <S.Temp_4_Container width_value={width_value} height_value={height_value}>
       <div className="temp_4_section">
-        <S.Icon color={buttonColor}>
+        <S.Icon color={buttonColor} img={image}>
           <Image
-            src="/template_images/temp4_image.svg"
-            width={36}
-            height={44}
+            src={image ? image : '/template_images/temp4_image.svg'}
+            width={image ? 90 : 36}
+            height={image ? 90 : 44}
+            objectFit="cover"
+            className="temp_4_img"
           />
         </S.Icon>
         <Rounded_Cancel_Btn top_value={'23px'} right_value={'23px'} />

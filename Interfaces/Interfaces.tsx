@@ -50,8 +50,8 @@ export interface RoundedCancelBtnInterface {
 
 // Sign up Btn
 export interface SignUpBtnInterface {
-  width_value: string
-  height_value: string
+  width_value: number | string
+  height_value: number | string
   bg_clr: string
   clr: string
   text: string
@@ -72,6 +72,7 @@ export interface initialInterface {
   disables: disablesInterface
   languages: string[]
   exitIntentTargeting: boolean
+  image: any
 }
 
 // Devices

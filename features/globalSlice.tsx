@@ -28,7 +28,9 @@ const initialState: initialInterface = {
   },
   // Languages
   languages: [],
-  exitIntentTargeting: true
+  exitIntentTargeting: true,
+  // Image
+  image: undefined
 }
 
 export const globalSlice = createSlice({
@@ -89,6 +91,9 @@ export const globalSlice = createSlice({
     // Exiting Intent Targeting
     toggleExitIntentTargeting: (state) => {
       state.exitIntentTargeting = !state.exitIntentTargeting
+    },
+    getImage: (state, action) => {
+      state.image = action.payload
     }
   }
 })
@@ -108,6 +113,7 @@ export const {
   getLanguages,
   deleteLanguage,
   deleteAllLanguages,
-  toggleExitIntentTargeting
+  toggleExitIntentTargeting,
+  getImage
 } = globalSlice.actions
 export default globalSlice.reducer

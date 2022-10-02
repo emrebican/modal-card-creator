@@ -12,26 +12,31 @@ import Sign_Up_Btn from '../../../abstracts/Sign_Up_Btn/Sign_Up_Btn'
 import { colors } from '../../../constants/constants'
 
 const Temp_5 = () => {
-  /* Width & Height */
-  const width_value: number = useSelector(
-    (state: RootState) => state.global.templateSize.width
-  )
-  const height_value: number = useSelector(
-    (state: RootState) => state.global.templateSize.height
-  )
+  const global = useSelector((state: RootState) => state.global)
 
-  const templateContent = useSelector(
-    (state: RootState) => state.global.templateContent
-  )
+  const width_value: number = global.templateSize.width
+  const height_value: number = global.templateSize.height
+  const templateContent = global.templateContent
+  const image: any = global.image
 
   const buttonColor = useSelector(
     (state: RootState) => state.global.buttonColor
   )
 
   return (
-    <S.Temp_5_Container width_value={width_value} height_value={height_value}>
+    <S.Temp_5_Container
+      width_value={width_value}
+      height_value={height_value}
+      img={image}
+    >
       <div className="temp_5_section">
-        <Image src="/template_images/temp5_image.png" width={90} height={90} />
+        <Image
+          src={image ? image : '/template_images/temp5_image.png'}
+          width={90}
+          height={90}
+          objectFit="cover"
+          className="temp_5_img"
+        />
         <Rounded_Cancel_Btn top_value={'23px'} right_value={'23px'} />
         <span className="temp_5_title">
           {templateContent?.heading || 'Join our mail list'}

@@ -12,7 +12,8 @@ const Temp_3_Input = () => {
     heading: '',
     text: '',
     btn_text1: '',
-    btn_text2: ''
+    btn_text2: '',
+    bg: 'image'
   })
 
   const handleContent = (e: React.ChangeEvent<HTMLInputElement>) => {

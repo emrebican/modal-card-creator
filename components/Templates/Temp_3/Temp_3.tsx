@@ -11,17 +11,12 @@ import Sign_Up_Btn from '../../../abstracts/Sign_Up_Btn/Sign_Up_Btn'
 import { colors } from '../../../constants/constants'
 
 const Temp_3 = () => {
-  /* Width & Height */
-  const width_value: number = useSelector(
-    (state: RootState) => state.global.templateSize.width
-  )
-  const height_value: number = useSelector(
-    (state: RootState) => state.global.templateSize.height
-  )
+  const global = useSelector((state: RootState) => state.global)
 
-  const templateContent = useSelector(
-    (state: RootState) => state.global.templateContent
-  )
+  const width_value: number = global.templateSize.width
+  const height_value: number = global.templateSize.height
+  const templateContent = global.templateContent
+  const image: any = global.image
 
   const buttonColor = useSelector(
     (state: RootState) => state.global.buttonColor
@@ -29,7 +24,12 @@ const Temp_3 = () => {
 
   return (
     <S.Temp_3_Container width_value={width_value} height_value={height_value}>
-      <S.Temp_3_Top>
+      <S.Temp_3_Top
+        style={{
+          backgroundImage: `url(
+            ${image ? image : '/template_images/temp3_image.png'})`
+        }}
+      >
         <Rounded_Cancel_Btn top_value={'23px'} right_value={'23px'} />
       </S.Temp_3_Top>
       <S.Temp_3_Bottom>

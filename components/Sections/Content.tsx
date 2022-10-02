@@ -21,6 +21,7 @@ const Content = () => {
   const templateNumber = useSelector(
     (state: RootState) => state.global.templateNumber
   )
+  const bg = useSelector((state: RootState) => state.global.templateContent?.bg)
 
   const display = () => {
     switch (templateNumber) {
@@ -61,10 +62,12 @@ const Content = () => {
           <span className={styles.section_title}>Edit your content</span>
           {display()}
         </div>
-        <div className={styles.section}>
-          <span className={styles.section_title}>Upload image</span>
-          <ImageUpload />
-        </div>
+        {bg === 'image' && (
+          <div className={styles.section}>
+            <span className={styles.section_title}>Upload image</span>
+            <ImageUpload />
+          </div>
+        )}
       </div>
     </>
   )

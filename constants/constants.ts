@@ -6,6 +6,7 @@ interface colorInterface {
   Gray: string
   LightGray: string
   BlueGray: string
+  Red: string
 }
 
 interface fontInterface {
@@ -26,7 +27,8 @@ export const colors: colorInterface = {
   Orange: '#F37C34',
   Gray: '#777',
   LightGray: '#DDD',
-  BlueGray: '#D2DAE3'
+  BlueGray: '#D2DAE3',
+  Red: '#ea0f0f'
 }
 
 export const fonts: fontInterface = {

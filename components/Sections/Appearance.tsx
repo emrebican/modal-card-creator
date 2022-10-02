@@ -22,17 +22,13 @@ const Appearance = () => {
 
   // Template Size
   const [size, setSize] = useState({ width: 0, height: 0 })
-  console.log('size: ', size)
 
-  const tempNumber = useSelector(
-    (state: RootState) => state.global.templateNumber
-  )
-  const width_value: number = useSelector(
-    (state: RootState) => state.global.templateSize.width
-  )
-  const height_value: number = useSelector(
-    (state: RootState) => state.global.templateSize.height
-  )
+  const global = useSelector((state: RootState) => state.global)
+
+  const tempNumber = global.templateNumber
+  const width_value = global.templateSize.width
+  const height_value = global.templateSize.height
+  const bg = global.templateContent?.bg
 
   useEffect(() => {
     setSize({ width: width_value, height: height_value })
@@ -104,12 +100,12 @@ const Appearance = () => {
           </div>
         </div>
         {/* Upload Logo */}
-        <div className={styles.section}>
-          <span className={styles.section_title}>upload logo</span>
-          {/* drag drop image upload nasıl çalışır öğren */}
-          {/* Ayrı bir component oluşturulabilir */}
-          <ImageUpload />
-        </div>
+        {bg === 'logo' && (
+          <div className={styles.section}>
+            <span className={styles.section_title}>upload logo</span>
+            <ImageUpload />
+          </div>
+        )}
       </div>
     </>
   )

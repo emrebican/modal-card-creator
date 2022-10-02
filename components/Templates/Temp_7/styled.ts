@@ -18,6 +18,10 @@ const Temp_7_Container = styled.div`
     align-items: center;
     word-wrap: break-word;
 
+    .temp_7_img {
+      border-radius: 50%;
+    }
+
     .temp_7_title {
       font-family: ${fonts.ff_Inter};
       font-size: 30px;

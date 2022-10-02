@@ -19,7 +19,6 @@ const Temp_1_Left = styled.div`
   background-color: ${colors.White};
 
   .temp_1_section {
-    width: ${(props: any) => (props.width_value < 740 ? '260px' : '300px')};
     margin: 0 40.5px;
     display: flex;
     flex-direction: column;
@@ -98,11 +97,12 @@ const Temp_1_Left = styled.div`
 `
 
 const Temp_1_Right = styled.div`
+  /* flex: 1; */
   flex: ${(props: any) => (props.width_value < 740 ? 1.5 : 1)};
   position: relative;
-  background-image: url('/template_images/temp1_image.png');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   border-top-right-radius: 14px;
   border-bottom-right-radius: 14px;
 `
