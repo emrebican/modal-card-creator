@@ -13,10 +13,17 @@ interface targetInterface {
   mobile: boolean
 }
 
+interface settingsInterface {
+  submission: boolean
+  data: boolean
+}
+
 export interface targetingValuesInterface {
   second: number | string
   scroll: number | string
   source: string
+  webhook: string
+  settings: settingsInterface
 }
 
 // Disables

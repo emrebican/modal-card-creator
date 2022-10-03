@@ -2,10 +2,52 @@ import styles from '../../styles/section_styles/Settings.module.scss'
 import Title from '../Section Titles/Title'
 import Image from 'next/image'
 
+import { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from '../../features/store'
+import { getTargetValues } from '../../features/globalSlice'
+import { handleCode } from '../../utilities/handleCode'
 import Targeting_Input from '../../tools/Targeting Input'
-import Checkbox from '../../tools/Checkbox'
 
 const Settings = () => {
+  const dispatch = useDispatch()
+  const global: any = useSelector((state: RootState) => state.global)
+  const targetValues = global.targetValues
+
+  const [settings, setSettings] = useState({
+    submission: false,
+    data: false
+  })
+
+  const [code, setCode] = useState({
+    color: '',
+    sizes: '',
+    content: '',
+    device: '',
+    second: '',
+    scroll: '',
+    source: '',
+    webhook: '',
+    submission: '',
+    data: '',
+    languages: '',
+    exitIntent: '',
+    image: ''
+  })
+
+  const handleCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = e.target
+
+    setSettings({
+      ...settings,
+      [name]: checked
+    })
+  }
+
+  useEffect(() => {
+    dispatch(getTargetValues({ ...targetValues, settings }))
+  }, [settings])
+
   return (
     <>
       <Title number={5} title="Settings and Code" />
@@ -23,25 +65,43 @@ const Settings = () => {
           <Targeting_Input
             type="text"
             place="Your Webhook URL"
-            value=""
+            value="webhook"
             disable={false}
           />
 
           <div className={styles.check_content}>
             <div className={styles.option}>
-              <Checkbox />
+              <input
+                type="checkbox"
+                name="submission"
+                checked={settings.submission}
+                onChange={handleCheck}
+              />
               <p>Send form submissions</p>
             </div>
             <div className={styles.option}>
-              <Checkbox />
+              <input
+                type="checkbox"
+                name="data"
+                checked={settings.data}
+                onChange={handleCheck}
+              />
               <p>Send click data</p>
             </div>
           </div>
 
           {/* Get your Code */}
-          <button className={styles.code_btn}>Get your Code</button>
+          <button
+            className={styles.code_btn}
+            onClick={() => handleCode({ global, setCode })}
+          >
+            Get your Code
+          </button>
           {/****************** !!!!! EMPTY !!!!! ******************/}
           <div className={styles.code_section}>
+            <div className={styles.code_display}>
+              {JSON.stringify(code, null, '\t')}
+            </div>
             <button className={styles.copy_btn}>Copy the code</button>
           </div>
 

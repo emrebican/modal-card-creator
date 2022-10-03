@@ -55,6 +55,12 @@
         font-size: 14px;
         line-height: 18px;
         color: $color-black;
+
+        input {
+          width: 18px;
+          height: 18px;
+          cursor: pointer;
+        }
       }
     }
 
@@ -88,6 +94,12 @@
       margin-top: 30px;
       margin-bottom: 15px;
       position: relative;
+
+      .code_display {
+        width: 350px;
+        margin: 0 auto;
+        color: $color-radio;
+      }
 
       .copy_btn {
         position: absolute;

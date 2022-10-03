@@ -16,13 +16,19 @@ const initialState: initialInterface = {
   targetValues: {
     second: '',
     scroll: '',
-    source: ''
+    source: '',
+    webhook: '',
+    settings: {
+      submission: false,
+      data: false
+    }
   },
   // Languages
   languages: [],
   exitIntentTargeting: true,
   // Image
   image: undefined,
+  // ------
   templateNumber: 0,
   disables: {
     disableDevice: false,
