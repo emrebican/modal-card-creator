@@ -16,13 +16,9 @@ import { useSelector } from 'react-redux'
 import { RootState } from '../../features/store'
 
 const TempDisplayArea = () => {
-  const templateNumber = useSelector(
-    (state: RootState) => state.global.templateNumber
-  )
-  const sizes = useSelector((state: RootState) => state.global.templateSize)
-
-  console.log(templateNumber)
-  console.log(sizes)
+  const global = useSelector((state: RootState) => state.global)
+  const templateNumber = global.templateNumber
+  const scrollPosition = global.scrollPosition
 
   const display = () => {
     switch (templateNumber) {
@@ -55,7 +51,11 @@ const TempDisplayArea = () => {
     }
   }
 
-  return <S.Display_Wrapper>{display()}</S.Display_Wrapper>
+  return (
+    <S.Display_Wrapper scrollPosition={scrollPosition}>
+      {display()}
+    </S.Display_Wrapper>
+  )
 }
 
 export default TempDisplayArea

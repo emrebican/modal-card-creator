@@ -60,7 +60,6 @@ export interface SignUpBtnInterface {
 
 // Initial Interface
 export interface initialInterface {
-  templateNumber: number
   buttonColor: string
   templateSize: {
     width: number
@@ -69,10 +68,12 @@ export interface initialInterface {
   templateContent: any
   targetingDevice: targetInterface
   targetValues: targetingValuesInterface
-  disables: disablesInterface
   languages: string[]
   exitIntentTargeting: boolean
   image: any
+  disables: disablesInterface
+  templateNumber: number
+  scrollPosition: number
 }
 
 // Devices

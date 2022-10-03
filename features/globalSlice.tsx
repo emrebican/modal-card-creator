@@ -5,7 +5,6 @@ import { colors } from '../constants/constants'
 import { initialInterface } from '../Interfaces/Interfaces'
 
 const initialState: initialInterface = {
-  templateNumber: 0,
   buttonColor: colors.Purple,
   templateSize: { width: 740, height: 443 },
   templateContent: null,
@@ -19,6 +18,12 @@ const initialState: initialInterface = {
     scroll: '',
     source: ''
   },
+  // Languages
+  languages: [],
+  exitIntentTargeting: true,
+  // Image
+  image: undefined,
+  templateNumber: 0,
   disables: {
     disableDevice: false,
     disableSeconds: false,
@@ -26,11 +31,7 @@ const initialState: initialInterface = {
     disableSource: false,
     disableLanguage: false
   },
-  // Languages
-  languages: [],
-  exitIntentTargeting: true,
-  // Image
-  image: undefined
+  scrollPosition: 0
 }
 
 export const globalSlice = createSlice({
@@ -92,8 +93,13 @@ export const globalSlice = createSlice({
     toggleExitIntentTargeting: (state) => {
       state.exitIntentTargeting = !state.exitIntentTargeting
     },
+    // Image
     getImage: (state, action) => {
       state.image = action.payload
+    },
+    // ScrollPosition
+    setScrollPosition: (state, action) => {
+      state.scrollPosition = action.payload
     }
   }
 })
@@ -114,6 +120,7 @@ export const {
   deleteLanguage,
   deleteAllLanguages,
   toggleExitIntentTargeting,
-  getImage
+  getImage,
+  setScrollPosition
 } = globalSlice.actions
 export default globalSlice.reducer
