@@ -14,7 +14,6 @@ This is an app which you can create a popup, made for PopupSmart React Practicum
 
 ## ScreenShots
 
-<!--  -->
 <p float="left">
 <img src="/public/images/ss_1.png" alt="img-1" style="height: 600px; width:500px;"/>
 <img src="/public/images/ss_2.png" alt="img-2" style="height: 600px; width:500px;"/>
@@ -47,7 +46,5 @@ This is an app which you can create a popup, made for PopupSmart React Practicum
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 
 ## Author
-
-<!--  -->
 
 Emre Bican - [Github](https://github.com/emrebican)

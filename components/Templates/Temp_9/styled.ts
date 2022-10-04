@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 import { colors, fonts } from '../../../constants/constants'
+import { Props } from '../../../Interfaces/Interfaces'
 
-const Temp_9_Container = styled.div`
-  width: ${(props: any) => props.width_value + 'px'};
-  height: ${(props: any) => props.height_value + 'px'};
-  background-color: ${(props: any) =>
+const Temp_9_Container = styled.div<Props>`
+  width: ${(props) => props.width_value + 'px'};
+  height: ${(props) => props.height_value + 'px'};
+  background-color: ${(props) =>
     props.bg_color ? props.bg_color : colors.Purple};
   display: flex;
   flex-direction: column;
@@ -14,7 +15,7 @@ const Temp_9_Container = styled.div`
   position: relative;
 `
 
-const Temp_9_Section = styled.div`
+const Temp_9_Section = styled.div<Props>`
   width: ${(props: any) => (props.width_value < 480 ? +'315px' : '349px')};
   margin: 0 65.5px;
   display: flex;

@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import { colors, fonts } from '../../constants/constants'
+import { Props } from '../../Interfaces/Interfaces'
 
-export const Upload_Wrapper = styled.div`
+export const Upload_Wrapper = styled.div<Props>`
   /* display: flex; */
   /* justify-content: flex-start; */
   /* height: 178px; */
@@ -16,12 +17,12 @@ export const Upload_Wrapper = styled.div`
     transform: translateX(-50%);
     z-index: -1;
 
-    background-color: ${(props: any) =>
+    background-color: ${(props) =>
       props.isLoad ? 'transparent' : 'rgba(125, 74, 234, 0.1)'};
-    width: ${(props: any) => !props.isLoad && '80px'};
-    height: ${(props: any) => !props.isLoad && '80px'};
-    border-radius: ${(props: any) => (props.isLoad ? '0px' : '12px')};
-    display: ${(props: any) => (props.isLoad ? 'block' : 'flex')};
+    width: ${(props) => !props.isLoad && '80px'};
+    height: ${(props) => !props.isLoad && '80px'};
+    border-radius: ${(props) => (props.isLoad ? '0px' : '12px')};
+    display: ${(props) => (props.isLoad ? 'block' : 'flex')};
     align-items: center;
     justify-content: center;
   }
@@ -48,7 +49,7 @@ export const Upload_Wrapper = styled.div`
     justify-content: center;
     gap: 5px;
     position: absolute;
-    bottom: ${(props: any) => (props.isLoad ? '80px' : '30px')};
+    bottom: ${(props) => (props.isLoad ? '80px' : '30px')};
     width: 100%;
     z-index: -1;
 
@@ -95,7 +96,6 @@ export const Upload_Wrapper = styled.div`
     background-color: ${colors.Red};
     color: ${colors.White};
     font-family: ${fonts.ff_Inter};
-    /* border: 1px solid ${colors.LightGray}; */
     border: none;
     font-size: 14px;
     padding: 1em;

@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import { colors, fonts } from '../../../constants/constants'
+import { Props } from '../../../Interfaces/Interfaces'
 
-const Temp_11_Container = styled.div`
-  width: ${(props: any) => props.width_value + 'px'};
-  height: ${(props: any) => props.height_value + 'px'};
+const Temp_11_Container = styled.div<Props>`
+  width: ${(props) => props.width_value + 'px'};
+  height: ${(props) => props.height_value + 'px'};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,14 +19,13 @@ const Temp_11_Container = styled.div`
     gap: 15px;
     width: 100%;
     font-family: ${fonts.ff_Inter};
-    margin-bottom: ${(props: any) =>
-      props.height_value < 549 ? '20px' : '51.5px'};
+    margin-bottom: ${(props) => (props.height_value < 549 ? '20px' : '51.5px')};
 
     .temp_11_top_text {
       font-size: 18px;
       font-weight: 500;
       line-height: 21.78px;
-      color: ${(props: any) =>
+      color: ${(props) =>
         props.color !== colors.White ? props.color : colors.Purple};
       text-transform: uppercase;
     }
@@ -43,7 +43,7 @@ const Temp_11_Container = styled.div`
       line-height: 24.2px;
       color: ${colors.Black};
       word-wrap: break-word;
-      width: ${(props: any) => (props.width_value < 480 ? '320px' : '366px')};
+      width: ${(props) => (props.width_value < 480 ? '320px' : '366px')};
       text-align: center;
     }
   }
@@ -55,7 +55,7 @@ const Temp_11_Container = styled.div`
     justify-content: center;
     align-items: flex-start;
     gap: 30px;
-    width: ${(props: any) => (props.width_value < 480 ? '290px' : '358px')};
+    width: ${(props) => (props.width_value < 480 ? '290px' : '358px')};
   }
 
   /* Buttons */

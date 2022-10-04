@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import { colors, fonts } from '../../../constants/constants'
+import { Props } from '../../../Interfaces/Interfaces'
 
-const Temp_7_Container = styled.div`
-  width: ${(props: any) => props.width_value + 'px'};
-  height: ${(props: any) => props.height_value + 'px'};
+const Temp_7_Container = styled.div<Props>`
+  width: ${(props) => props.width_value + 'px'};
+  height: ${(props) => props.height_value + 'px'};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,7 +41,7 @@ const Temp_7_Container = styled.div`
       margin-top: 20px;
       margin-bottom: 43.5px;
       text-align: center;
-      width: ${(props: any) => (props.width_value < 480 ? '300px' : '355px')};
+      width: ${(props) => (props.width_value < 480 ? '300px' : '355px')};
     }
 
     /* FORM */

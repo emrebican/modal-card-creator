@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import { colors, fonts } from '../../../constants/constants'
+import { Props } from '../../../Interfaces/Interfaces'
 
-const Temp_6_Container = styled.div`
-  width: ${(props: any) => props.width_value + 'px'};
-  height: ${(props: any) => props.height_value + 'px'};
+const Temp_6_Container = styled.div<Props>`
+  width: ${(props) => props.width_value + 'px'};
+  height: ${(props) => props.height_value + 'px'};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +13,7 @@ const Temp_6_Container = styled.div`
   position: relative;
 
   .temp_6_section {
-    width: ${(props: any) => (props.width_value < 480 ? +'315px' : '349px')};
+    width: ${(props) => (props.width_value < 480 ? +'315px' : '349px')};
     margin: 0 65.5px;
     display: flex;
     flex-direction: column;
@@ -65,18 +66,18 @@ const Temp_6_Container = styled.div`
   }
 `
 
-const Icon = styled.div`
-  width: ${(props: any) => (props.img ? '96px' : '90px')};
-  height: ${(props: any) => (props.img ? '96px' : '90px')};
+const Icon = styled.div<Props>`
+  width: ${(props) => (props.img ? '96px' : '90px')};
+  height: ${(props) => (props.img ? '96px' : '90px')};
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${(props: any) =>
+  background-color: ${(props) =>
     props.color !== colors.White ? props.color : colors.Purple};
 
   .temp_6_img {
-    border-radius: ${(props: any) => (props.img ? '50%' : '0%')};
+    border-radius: ${(props) => (props.img ? '50%' : '0%')};
   }
 `
 

@@ -53,7 +53,6 @@ const Temp_5 = () => {
           <input
             type="text"
             placeholder={templateContent?.input_1 || 'Enter your email'}
-            width_value={width_value}
             style={{ marginBottom: width_value < 480 ? '20px' : '31px' }}
           />
         </div>

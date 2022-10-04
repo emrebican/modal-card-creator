@@ -1,16 +1,17 @@
 import styled from 'styled-components'
 import { colors, fonts } from '../../../constants/constants'
+import { Props } from '../../../Interfaces/Interfaces'
 
-const Temp_1_Container = styled.div`
-  width: ${(props: any) => props.width_value + 'px'};
-  height: ${(props: any) => props.height_value + 'px'};
+const Temp_1_Container = styled.div<Props>`
+  width: ${(props) => props.width_value + 'px'};
+  height: ${(props) => props.height_value + 'px'};
   display: flex;
   transition: all ease 0.4s;
 `
 
-const Temp_1_Left = styled.div`
+const Temp_1_Left = styled.div<Props>`
   /* flex: 1; */
-  flex: ${(props: any) => (props.width_value < 740 ? 0.8 : 1)};
+  flex: ${(props) => (props.width_value < 740 ? 0.8 : 1)};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,7 +97,7 @@ const Temp_1_Left = styled.div`
   }
 `
 
-const Temp_1_Right = styled.div`
+const Temp_1_Right = styled.div<Props>`
   /* flex: 1; */
   flex: ${(props: any) => (props.width_value < 740 ? 1.5 : 1)};
   position: relative;

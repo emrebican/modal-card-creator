@@ -24,7 +24,7 @@ const Temp_1 = () => {
 
   return (
     <S.Temp_1_Container width_value={width_value} height_value={height_value}>
-      <S.Temp_1_Left width_value={width_value}>
+      <S.Temp_1_Left width_value={width_value} height_value={height_value}>
         <div className="temp_1_section">
           <span className="temp_1_title">
             {templateContent?.heading || 'Sign up'}

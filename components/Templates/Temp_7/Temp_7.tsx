@@ -47,7 +47,6 @@ const Temp_7 = () => {
           <input
             type="text"
             placeholder={templateContent?.input_1 || 'Enter your email'}
-            width_value={width_value}
           />
         </div>
         {/* Buttons */}

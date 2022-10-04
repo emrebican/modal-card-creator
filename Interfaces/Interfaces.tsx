@@ -107,3 +107,17 @@ export interface faqInterface {
   handleOpen: any
   handleClose: any
 }
+
+export interface Props {
+  width_value?: any
+  height_value?: any
+  img?: any
+  bg_color?: any
+  bg_clr?: any
+  clr?: any
+  border_value?: any
+  scrollPosition?: any
+  top_value?: any
+  right_value?: any
+  isLoad?: any
+}

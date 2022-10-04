@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import { Props } from '../../Interfaces/Interfaces'
 
-export const Img = styled.img`
+export const Img = styled.img<Props>`
   position: absolute;
-  top: ${(props: any) => props.top_value};
-  right: ${(props: any) => props.right_value};
+  top: ${(props) => props.top_value};
+  right: ${(props) => props.right_value};
 
   cursor: pointer;
 `

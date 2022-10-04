@@ -1,16 +1,17 @@
 import styled from 'styled-components'
 import { colors, fonts } from '../../../constants/constants'
+import { Props } from '../../../Interfaces/Interfaces'
 
-const Temp_12_Container = styled.div`
-  width: ${(props: any) => props.width_value + 'px'};
-  height: ${(props: any) => props.height_value + 'px'};
+const Temp_12_Container = styled.div<Props>`
+  width: ${(props) => props.width_value + 'px'};
+  height: ${(props) => props.height_value + 'px'};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: all ease 0.4s;
-  background-color: ${(props: any) => props.color};
-  color: ${(props: any) =>
+  background-color: ${(props) => props.color};
+  color: ${(props) =>
     props.color === colors.Black ||
     props.color === colors.Purple ||
     props.color === colors.Orange ||
@@ -26,8 +27,7 @@ const Temp_12_Container = styled.div`
     gap: 20px;
     width: 100%;
     font-family: ${fonts.ff_Inter};
-    margin-bottom: ${(props: any) =>
-      props.height_value < 549 ? '20px' : '51.5px'};
+    margin-bottom: ${(props) => (props.height_value < 549 ? '20px' : '51.5px')};
 
     .temp_12_center_text {
       font-size: 36px;
@@ -40,7 +40,7 @@ const Temp_12_Container = styled.div`
       font-weight: 400;
       line-height: 29.05px;
       word-wrap: break-word;
-      width: ${(props: any) => (props.width_value < 480 ? '320px' : '420px')};
+      width: ${(props) => (props.width_value < 480 ? '320px' : '420px')};
       text-align: center;
     }
   }
@@ -52,7 +52,7 @@ const Temp_12_Container = styled.div`
     justify-content: center;
     align-items: flex-start;
     gap: 21px;
-    margin-top: ${(props: any) => (props.height_value < 400 ? '10px' : '45px')};
+    margin-top: ${(props) => (props.height_value < 400 ? '10px' : '45px')};
 
     .radio_label {
       display: flex;
@@ -72,7 +72,7 @@ const Temp_12_Container = styled.div`
       height: 47px;
       border-radius: 12px;
       outline: none;
-      border: ${(props: any) =>
+      border: ${(props) =>
         props.color == colors.LightGray
           ? `1px solid ${colors.Gray}`
           : `1px solid ${colors.BlueGray}`};

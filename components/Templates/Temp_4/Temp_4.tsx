@@ -45,11 +45,7 @@ const Temp_4 = () => {
 
         {/* FORM */}
         <div className="temp_4_form">
-          <input
-            type="text"
-            placeholder={templateContent?.input_1 || 'Code'}
-            width_value={width_value}
-          />
+          <input type="text" placeholder={templateContent?.input_1 || 'Code'} />
         </div>
         {/* Buttons */}
         <div className="temp_4_buttons">
