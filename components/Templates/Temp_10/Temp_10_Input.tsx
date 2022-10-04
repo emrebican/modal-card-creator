@@ -15,7 +15,7 @@ const Temp_10_Input = () => {
     input_2: '',
     btn_text: '',
     bottom_text: '',
-    bg: ''
+    bg: 'image'
   })
 
   const handleContent = (e: React.ChangeEvent<HTMLInputElement>) => {
