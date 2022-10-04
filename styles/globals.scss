@@ -1,10 +1,13 @@
 @import 'variables';
+// Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+// Inter
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
-  /* background: linear-gradient(180deg, #ffffff 0%, #e3f2f7 100%); */
   position: relative;
   width: 100%;
 
