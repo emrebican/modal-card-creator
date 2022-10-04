@@ -16,7 +16,7 @@ This is an app which you can create a popup, made for PopupSmart React Practicum
 
 <!--  -->
 <p float="left">
-<img src="/public/images/ss_1.png" alt="img-1" style="height: 600px; width:500px; object-fit: cover"/>
+<img src="/public/images/ss_1.png" alt="img-1" style="height: 600px; width:500px; object-fit: contain"/>
 <img src="/public/images/ss_2.png" alt="img-2" style="height: 600px; width:500px;"/>
 </p>
 <p float="left">
