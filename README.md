@@ -16,16 +16,16 @@ This is an app which you can create a popup, made for PopupSmart React Practicum
 
 <!--  -->
 <p float="left">
-<img src="/public/ss_1.png" alt="img-1" style="height: 600px; width:600px;"/>
-<img src="/public/images/ss_2.png" alt="img-2" style="height: 600px; width:600px;"/>
+<img src="/public/images/ss_1.png" alt="img-1" style="height: 600px; width:500px;"/>
+<img src="/public/images/ss_2.png" alt="img-2" style="height: 600px; width:500px;"/>
 </p>
 <p float="left">
-<img src="/public/ss_3.png" alt="img-3" style="height: 600px; width:600px;"/>
-<img src="/public/images/ss_4.png" alt="img-4" style="height: 600px; width:600px;"/>
+<img src="/public/images/ss_3.png" alt="img-3" style="height: 600px; width:500px;"/>
+<img src="/public/images/ss_4.png" alt="img-4" style="height: 600px; width:500px;"/>
 </p>
 <p float="left">
-<img src="/public/ss_5.png" alt="img-5" style="height: 600px; width:600px;"/>
-<img src="/public/images/ss_6.png" alt="img-6" style="height: 600px; width:600px;"/>
+<img src="/public/images/ss_5.png" alt="img-5" style="height: 600px; width:500px;"/>
+<img src="/public/images/ss_7.png" alt="img-6" style="height: 600px; width:500px;"/>
 </p>
 
 ## This app made with [Next.js](https://nextjs.org/docs/getting-started) and include technologies following:
