@@ -3,9 +3,7 @@
 This is an app which you can create a popup, made for PopupSmart React Practicum
 <br />
 
-<!--  -->
-
-[App Link](https://world-rank-omega.vercel.app/)
+[App Link](https://modal-card-creator.vercel.app/)
 
 ## Features
 
@@ -37,7 +35,7 @@ This is an app which you can create a popup, made for PopupSmart React Practicum
 - Module basis scss in Next.js
 - Styled-Components
 - React icons
-- Figma
+- Figma [link](https://www.figma.com/file/Gnlps8VnkCoaV5ZKTcrVHB/Patika-Dev-Micro-Project?node-id=0%3A1)
 
 ## Resources
 
