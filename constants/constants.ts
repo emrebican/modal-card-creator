@@ -32,8 +32,8 @@ export const colors: colorInterface = {
 }
 
 export const fonts: fontInterface = {
-  ff_Inter: 'Inter',
-  ff_Poppins: 'Poppins'
+  ff_Inter: 'Inter, sans-serif',
+  ff_Poppins: 'Poppins, sans-serif'
 }
 
 export const active_Classes: activeInterface = {
